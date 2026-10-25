@@ -6,3 +6,4 @@ post_f6976fa6-752d-4896-96ae-f45514ddc296  2026-10-15  Como encontrar las mejore
 post_cd606f5e-6bac-4257-bd2b-3003ddea2711  2026-10-16  Fábrica de Memecoins (línea base, no convertido)
 post_cc426e36-c20b-4472-9b06-35107f60be90  2026-10-19  Fábrica de Memecoins, 2a versión (línea base, no convertido)
 carrusel:2026-10-24-fabrica-de-memecoins  2026-10-19  Fábrica de Memecoins (aprobado; programado IG+TikTok 2026-10-25 10:00 Hermosillo)
+post_0f3011ab-60af-453e-b20b-518774ff9315  Binance (cancelado por Adrián el 2026-10-24, no hacer carrusel)
