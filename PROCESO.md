@@ -28,6 +28,9 @@ Lo ejecuta la tarea programada diaria. Todo en español latino.
 - Si ningún fondo del banco encaja con la portada, puedes generar UNO nuevo con Runway (`gpt-image-2`, ratio `1080:1350`, prompt base en `fondos/INDICE.md`) y agrégalo al banco. Máximo 1 por carrusel, para cuidar créditos.
 - Mascota (Doggy, Doggy con lentes, el perrillo o Chubby): **a veces, no siempre**. Más o menos en la mitad de los carruseles, en 1–2 slides. Doggy como personaje, nunca para promover el precio de $DOGGY.
 - Handle: **@elholder_** (un guion bajo).
+- **Sin etiquetas arriba a la izquierda.** La barra superior solo lleva el número de slide (`n / total`) a la derecha; en la portada, el logo de El Holder. Si un dato de contexto importa (fecha, sección), va dentro del texto principal.
+- **Logos de terceros:** cuando el carrusel trata de un proyecto con logo reconocible (pump.fun, Binance, etc.), úsalo como elemento visual si Adrián lo proporcionó o ya está en `brand/terceros/` (sin fondo, PNG). Nunca inventes ni redibujes logos.
+- **Fondos que manda Adrián:** si dice algo como "imagen 1 en slide 3, imagen 2 en slide 5", usa sus fotos adjuntas (en el orden en que las adjuntó) como fondo de esos slides, en lugar del banco. Recórtalas a 1080×1350 (cover, centrado), guárdalas en la carpeta del carrusel (`carruseles/<carpeta>/fondos/`) y mantén la capa azul para que el texto se lea.
 - Render: `python3 plantilla/render.py carruseles/<carpeta>` y revisa `preview.jpg` visualmente (que el texto no se encime, que se lea, que nada se corte). Corrige y vuelve a renderizar si hace falta.
 
 ## 5. Descripción, hashtags y música
