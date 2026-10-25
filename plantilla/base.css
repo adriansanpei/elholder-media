@@ -1,0 +1,56 @@
+/* El Holder — base para slides de carrusel IG (1080x1350). Ver plantilla/README.md */
+@font-face{font-family:'Inter Tight';font-weight:700;src:url('../fonts/inter-tight-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:800;src:url('../fonts/inter-tight-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:900;src:url('../fonts/inter-tight-latin-900-normal.woff2') format('woff2')}
+
+:root{
+  --navy:#152F46; --white:#FFFFFF; --gris:#C9D6E2; --gris2:#DCE6EF;
+  --acento:#FFC93C; --verde:#5EE0A8; --rojo:#FF8A7A;
+}
+html,body{margin:0;padding:0;background:var(--navy)}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box;
+  background:var(--navy);color:var(--white);font-family:'Inter Tight',sans-serif}
+
+/* Fondo foto + capa azul */
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.capa{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,47,70,.85) 0%,rgba(21,47,70,.55) 50%,rgba(21,47,70,.92) 100%)}
+.capa.suave{background:linear-gradient(180deg,rgba(21,47,70,.55) 0%,rgba(21,47,70,.35) 45%,rgba(21,47,70,.92) 100%)}
+.capa.plana{background:rgba(21,47,70,.65)}
+
+/* Barra superior: etiqueta + n/total */
+.top{position:absolute;top:64px;left:64px;right:64px;display:flex;justify-content:space-between;
+  font-size:24px;font-weight:800;letter-spacing:.1em;color:var(--gris);text-transform:uppercase}
+
+/* Bloques de texto */
+.arriba{position:absolute;left:64px;right:64px;top:150px;display:flex;flex-direction:column;gap:24px}
+.centro{position:absolute;left:64px;right:64px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:48px}
+.abajo{position:absolute;left:64px;right:64px;bottom:150px;display:flex;flex-direction:column;gap:16px}
+.abajo.angosto{right:auto;width:640px}
+
+/* Tipografía */
+h1,h2,p{margin:0}
+.t-xxl{font-size:150px;line-height:.9;font-weight:900;letter-spacing:-.045em}
+.t-xl{font-size:110px;line-height:.92;font-weight:900;letter-spacing:-.045em}
+.t-l{font-size:84px;line-height:.95;font-weight:900;letter-spacing:-.04em}
+.t-m{font-size:60px;line-height:.98;font-weight:900;letter-spacing:-.035em}
+.t-s{font-size:44px;line-height:1.05;font-weight:800;letter-spacing:-.025em;color:var(--gris2)}
+.t-xs{font-size:30px;line-height:1.15;font-weight:800;color:var(--gris2)}
+.cifra{font-size:230px;line-height:.85;font-weight:900;letter-spacing:-.06em;color:var(--acento)}
+.acento{color:var(--acento)} .verde{color:var(--verde)} .rojo{color:var(--rojo)} .blanco{color:var(--white)}
+.subraya{text-decoration:underline;text-decoration-thickness:7px;text-underline-offset:10px}
+
+/* Filas de datos (ranking / movers) */
+.fila{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid rgba(255,255,255,.35);padding-top:12px}
+.fila .n{font-size:40px;font-weight:900;letter-spacing:-.02em}
+.fila .v{font-size:44px;font-weight:900;letter-spacing:-.03em}
+.sep{height:4px;background:rgba(255,255,255,.4)}
+
+/* Mascota y pie */
+.mascota{position:absolute;right:40px;bottom:130px;width:300px;height:auto}
+.mascota.grande{right:-40px;bottom:0;width:480px}
+.pie{position:absolute;left:64px;right:64px;bottom:64px;display:flex;justify-content:space-between;align-items:center;
+  font-size:22px;font-weight:700;color:var(--gris)}
+.pie img{width:180px;height:auto;display:block}
+.handle{font-size:30px;font-weight:800;color:var(--white)}
+.boton{display:inline-block;background:var(--acento);color:var(--navy);border-radius:999px;padding:22px 40px;font-size:40px;font-weight:900;letter-spacing:-.02em}
+.pill{font-size:24px;font-weight:800;letter-spacing:.1em;border:3px solid var(--white);padding:10px 20px;border-radius:999px}
