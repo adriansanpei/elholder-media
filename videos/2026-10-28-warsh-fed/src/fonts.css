@@ -1,0 +1,7 @@
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0;padding:0;background:transparent}
+*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;font-family:'IT';overflow:hidden;color:#fff}
+.a{color:#FFC93C}
