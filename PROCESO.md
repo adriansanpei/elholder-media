@@ -1,4 +1,6 @@
-# Proceso: post de beehiiv → carrusel de Instagram + TikTok (@elholder_)
+# Proceso: post de beehiiv → carrusel de Instagram (@elholder_)
+
+> **Regla (29 oct 2026, Adrián):** los carruseles YA NO se suben a TikTok. En TikTok funcionan los videos en movimiento; en Instagram, los carruseles. Carrusel = solo Instagram (y LinkedIn si Adrián lo pide). TikTok solo recibe videos.
 
 Lo ejecuta la tarea programada diaria. Todo en español latino.
 
@@ -47,11 +49,6 @@ Lo ejecuta la tarea programada diaria. Todo en español latino.
 - Marca `blogId` 7622330 (elholder_), zona `America/Hermosillo`.
 - Horario: `getBestTimeToPostByNetwork` (instagram) para los próximos 3 días; elige la mejor hora a partir de 2 h desde ahora. Revisa `getScheduledPosts` para no chocar con otro post el mismo día.
 - `createScheduledPost` con: `providers [{network: instagram}]`, `instagramData {type: POST, isAiGenerated: true}`, `media` = las URLs raw de GitHub en orden, `text` = descripción + hashtags, **`autoPublish: false`** (Metricool le manda notificación al cel a la hora programada para que Adrián publique desde Instagram y le ponga la música).
-- **TikTok (mismo carrusel, misma aprobación):** un segundo `createScheduledPost` aparte (no en el mismo post que Instagram, porque `autoPublish` es distinto):
-  - Horario: `getBestTimeToPostByNetwork` con `tiktok`; si no hay datos todavía, usa la misma hora que Instagram.
-  - `providers [{network: tiktok}]`, `media` = las mismas URLs en orden, **`autoPublish: true`** (se publica solo).
-  - `tiktokData {title: <título corto, máx. 90 caracteres>, autoAddMusic: true, photoCoverIndex: 0, privacyOption: PUBLIC_TO_EVERYONE, disableComment: false, disableDuet: false, disableStitch: false, commercialContentThirdParty: false, commercialContentOwnBrand: false}`. Si el carrusel promueve un producto propio (seminario, Skool, $DOGGY), `commercialContentOwnBrand: true`; si es patrocinado, `commercialContentThirdParty: true`.
-  - `text` = descripción versión TikTok: más corta (gancho + 2 líneas de valor + pregunta + "suscríbete gratis, link en perfil" + aviso de riesgo si aplica) y 3–5 hashtags de TikTok.
-  - Si TikTok rechaza el post (formato, cuenta personal, etc.), avisa a Adrián con el error exacto; Instagram sigue igual.
+- **TikTok:** no se publican carruseles en TikTok (regla del 29 oct 2026). Solo videos.
 - Confirma a Adrián día/hora de cada red y los `plannerUrl`.
 - Plan gratis de Metricool: 20 publicaciones al mes. Revisa con `getScheduledPosts` cuántas van en el mes; si cada red cuenta como publicación aparte y se van a pasar, avísale antes de programar.
