@@ -1,0 +1,77 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0;padding:0}*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#logo{position:absolute;left:64px;top:170px;width:250px}
+#chip{position:absolute;right:64px;top:182px;border:3px solid #FFC93C;color:#FFC93C;border-radius:8px;padding:8px 18px;font-size:26px;font-weight:900;letter-spacing:.12em}
+#sub{position:absolute;left:64px;top:300px;font-size:44px;font-weight:800;color:#DCE6EF;letter-spacing:-.02em}
+#tot{position:absolute;left:58px;top:350px;font-size:200px;line-height:1;font-weight:900;letter-spacing:-.06em;color:#FF8A7A}
+#cnt{position:absolute;left:64px;top:568px;font-size:46px;font-weight:800;letter-spacing:-.02em}
+#cnt span{color:#C9D6E2;font-weight:700}
+#card{position:absolute;left:40px;right:40px;top:660px;height:900px;border-radius:32px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.10)}
+svg{position:absolute;left:0;top:0}
+.ev{position:absolute;background:#0F2538;border:2px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 16px 12px;white-space:nowrap;opacity:0;transition:none}
+.ev .n{font-size:24px;font-weight:800;color:#DCE6EF;letter-spacing:-.01em}
+.ev .v{font-size:40px;font-weight:900;color:#FFC93C;letter-spacing:-.03em;line-height:1.05}
+.ev .v small{font-size:22px;color:#C9D6E2;font-weight:700;letter-spacing:0}
+#leg{position:absolute;left:84px;top:690px;display:flex;gap:44px}
+.tag{display:flex;align-items:baseline;gap:12px;font-weight:900;white-space:nowrap}
+.tag i{width:16px;height:16px;border-radius:50%;display:inline-block;align-self:center}
+.tag b{font-size:24px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#C9D6E2}
+.tag span{font-size:40px;letter-spacing:-.03em}
+#cred{position:absolute;left:64px;top:1590px;font-size:24px;font-weight:700;color:#9FB4C7}
+#handle{position:absolute;right:64px;top:1588px;font-size:30px;font-weight:800}
+</style></head><body>
+<img id="logo" src="../../../brand/logo-horizontal-transparente.png">
+<span id="chip">OCT 2026</span>
+<div id="sub">liquidaciones cripto en octubre</div>
+<div id="tot">$0</div>
+<div id="cnt">0 <span>liquidaciones</span></div>
+<div id="card"></div>
+<svg id="s" width="1080" height="1920"></svg>
+<div class="ev" id="e0"><div class="n">reporte de ataque a Irán</div><div class="v">$628M <small>en 1 hora</small></div></div>
+<div class="ev" id="e1"><div class="n">inflación de EE.UU.</div><div class="v">$551M <small>en 1 hora</small></div></div>
+<div class="ev" id="e2"><div class="n">reporte de evacuación en Medio Oriente</div><div class="v">$253M <small>en 1 hora</small></div></div>
+<div class="ev" id="e3"><div class="n">hackeo de Binance</div><div class="v">$1.11B <small>en 4 horas</small></div></div>
+<div id="leg"><div class="tag" id="tL"><i style="background:#FF8A7A"></i><b>longs</b><span style="color:#FF8A7A">$0</span></div><div class="tag" id="tS"><i style="background:#5EE0A8"></i><b>shorts</b><span style="color:#5EE0A8">$0</span></div></div>
+<div id="cred">datos: Watcher.Guru</div>
+<div id="handle">@elholder_</div>
+<script>
+let DATA=null;
+const X0=110,X1=900,Y0=1440,YT=770,VMAX=10;
+const px=d=>X0+(X1-X0)*d/31, py=v=>Y0-(Y0-YT)*v/VMAX;
+const CNT=[[0,0],[1,71e3],[4,251e3],[7,421e3],[8,620e3],[9,819e3],[12,1.01e6],[13,1.23e6],[15,1.45e6],[16,1.64e6],[18,1.86e6],[21,2.02e6],[23,2.22e6],[24,2.51e6],[27,2.70e6],[29,2.86e6],[30,3.13e6],[31,3.17e6]];
+const EV=[{d:7.7},{d:14.1},{d:23.6},{d:28.9}];
+function interp(arr,d){for(let i=1;i<arr.length;i++){if(d<=arr[i][0]){const a=arr[i-1],b=arr[i];return a[1]+(b[1]-a[1])*(d-a[0])/(b[0]-a[0]);}}return arr[arr.length-1][1];}
+function at(key,d){const i=Math.min(DATA.d.length-1,Math.max(0,d*10));const i0=Math.floor(i),i1=Math.min(DATA.d.length-1,i0+1),f=i-i0;return DATA[key][i0]*(1-f)+DATA[key][i1]*f;}
+function money(b){if(b<1)return '$'+Math.round(b*1000)+'M';if(b<10)return '$'+b.toFixed(2)+'B';return '$'+b.toFixed(1)+'B';}
+function count(n){if(n<1e6)return Math.round(n/1e3)+'K';return (n/1e6).toFixed(2)+'M';}
+function path(key,d){let p='';const n=Math.floor(d*10);for(let i=0;i<=n;i++){p+=(i?'L':'M')+px(DATA.d[i]).toFixed(1)+','+py(DATA[key][i]).toFixed(1);}p+='L'+px(d).toFixed(1)+','+py(at(key,d)).toFixed(1);return p;}
+window.draw=function(d){
+ const s=document.getElementById('s');let h='';
+ h+='<defs><linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8A7A" stop-opacity=".45"/><stop offset="1" stop-color="#FF8A7A" stop-opacity="0"/></linearGradient><linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5EE0A8" stop-opacity=".35"/><stop offset="1" stop-color="#5EE0A8" stop-opacity="0"/></linearGradient></defs>';
+ for(const v of [2,4,6,8,10]){h+=`<line x1="${X0}" x2="${X1}" y1="${py(v)}" y2="${py(v)}" stroke="rgba(255,255,255,.10)" stroke-width="2"/><text x="${X0-14}" y="${py(v)+8}" fill="#9FB4C7" font-size="22" font-weight="700" text-anchor="end" font-family="IT">$${v}B</text>`;}
+ h+=`<line x1="${X0}" x2="${X1}" y1="${Y0}" y2="${Y0}" stroke="rgba(255,255,255,.3)" stroke-width="2"/>`;
+ for(const [day,l] of [[0,'1 oct'],[7,'8 oct'],[14,'15 oct'],[21,'22 oct'],[31,'31 oct']]){h+=`<text x="${px(day)}" y="${Y0+44}" fill="${day<=d?'#DCE6EF':'#5E7A93'}" font-size="24" font-weight="800" text-anchor="middle" font-family="IT">${l}</text>`;}
+ if(d>0.05){
+  const pl=path('L',d),ps=path('S',d);
+  h+=`<path d="${pl}L${px(d)},${Y0}L${X0},${Y0}Z" fill="url(#gl)"/><path d="${ps}L${px(d)},${Y0}L${X0},${Y0}Z" fill="url(#gs)"/>`;
+  h+=`<path d="${ps}" fill="none" stroke="#5EE0A8" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="${pl}" fill="none" stroke="#FF8A7A" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>`;
+  h+=`<circle cx="${px(d)}" cy="${py(at('L',d))}" r="12" fill="#FF8A7A"/><circle cx="${px(d)}" cy="${py(at('S',d))}" r="11" fill="#5EE0A8"/>`;
+ }
+ // events
+ EV.forEach((e,k)=>{const el=document.getElementById('e'+k);const show=d>=e.d;const a=Math.max(0,Math.min(1,(d-e.d)/0.6));
+  const x=px(e.d),y=py(at('L',e.d));el.style.opacity=show?a:0;
+  const w=el.offsetWidth,hh=el.offsetHeight;let lx=Math.max(56,Math.min(x-w-26,1024-w));let ly=y-hh-40;
+  el.style.left=lx+'px';el.style.top=ly+'px';
+  if(show){h+=`<line x1="${Math.min(lx+w,x-6)}" y1="${ly+hh}" x2="${x}" y2="${y}" stroke="rgba(255,255,255,${.6*a})" stroke-width="3"/><circle cx="${x}" cy="${y}" r="9" fill="#FFC93C" opacity="${a}"/>`;}});
+ s.innerHTML=h;
+ const L=at('L',d),S=at('S',d);
+ document.getElementById('tot').textContent=money(L+S);
+ document.getElementById('cnt').innerHTML=count(interp(CNT,d))+' <span>liquidaciones</span>';
+ const tL=document.getElementById('tL'),tS=document.getElementById('tS');
+ tL.querySelector('span').textContent=money(L);tS.querySelector('span').textContent=money(S);
+};
+</script></body></html>
