@@ -5,7 +5,7 @@
 
 :root{
   --navy:#152F46; --white:#FFFFFF; --gris:#C9D6E2; --gris2:#DCE6EF;
-  --acento:#FFC93C; --verde:#5EE0A8; --rojo:#FF8A7A;
+  --acento:#4FC3FF; --verde:#5EE0A8; --rojo:#FF8A7A;
 }
 html,body{margin:0;padding:0;background:var(--navy)}
 .slide{width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box;
