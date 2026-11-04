@@ -5,18 +5,22 @@
 html,body{margin:0}*{box-sizing:border-box}
 body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
 #foto{position:absolute;left:0;top:80px;width:1080px;height:536px;background:url(foto2.jpg) center/cover}
-#pill{position:absolute;left:64px;top:24px;display:flex;align-items:center;gap:12px;background:#E5484D;color:#fff;font-weight:900;font-size:24px;letter-spacing:.08em;padding:9px 18px;border-radius:999px}
-#pill i{width:12px;height:12px;border-radius:50%;background:#fff;display:block}
-#txt{position:absolute;left:64px;right:64px;top:668px;display:flex;flex-direction:column;gap:26px}
+#foto{top:0 !important;height:600px !important}
+#bar{position:absolute;left:0;top:600px;width:1080px;height:6px;background:#4FC3F7}
+#pill{position:absolute;left:64px;top:568px;display:flex;align-items:stretch;height:64px;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#pill .l{display:flex;align-items:center;gap:12px;background:#4FC3F7;color:#0E2235;font-weight:900;font-size:26px;letter-spacing:.1em;padding:0 22px}
+#pill .l i{width:14px;height:14px;border-radius:50%;background:#0E2235;display:block;box-shadow:0 0 0 5px rgba(14,34,53,.25)}
+#pill .r{display:flex;align-items:center;background:#fff;color:#152F46;font-weight:900;font-size:26px;letter-spacing:.06em;padding:0 22px}
+#txt{position:absolute;left:64px;right:64px;top:690px;display:flex;flex-direction:column;gap:26px}
 h1{margin:0;font-weight:900;font-size:80px;line-height:.98;letter-spacing:-.025em;text-transform:uppercase}
-h1 .a{color:#FFC93C}
+h1 .a{color:#4FC3F7}
 p{margin:0;font-weight:700;font-size:36px;line-height:1.22;color:#DCE6EF}
 #pie{position:absolute;left:64px;right:64px;bottom:52px;display:flex;align-items:center;justify-content:space-between}
 #pie img{width:200px}
 #pie span{font-size:24px;font-weight:700;color:#9FB4C7}
 </style></head><body>
-<span id="pill"><i></i>ÚLTIMA HORA</span>
-<div id="foto"></div>
+<div id="foto"></div><div id="bar"></div>
+<div id="pill"><span class="l"><i></i>ÚLTIMA HORA</span><span class="r">EE.UU.</span></div>
 <div id="txt" class="chk">
  <h1 class="chk">Los demócratas van tras los negocios <span class="a">cripto de Trump</span></h1>
  <p class="chk">Planean investigar los lazos financieros de la industria cripto con el presidente y su familia. Según Bloomberg, sus negocios cripto le habrían dejado $1,400 millones de dólares en su primer año de regreso.</p>
