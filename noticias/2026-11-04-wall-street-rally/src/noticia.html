@@ -4,7 +4,8 @@
 @font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
 html,body{margin:0}*{box-sizing:border-box}
 body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
-#viz{position:absolute;left:0;top:0;width:1080px;height:600px;background:#0E2235;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr 150px;gap:8px;padding:8px}
+#foto{position:absolute;left:0;top:0;width:1080px;height:688px;background:url(foto-heatmap.jpg) center/cover}
+#vizold{position:absolute;left:0;top:0;width:1080px;height:600px;background:#0E2235;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr 150px;gap:8px;padding:8px}
 .t{border-radius:10px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px}
 .t b{font-size:58px;font-weight:900;letter-spacing:-.03em}
 .t span{font-size:44px;font-weight:800;letter-spacing:-.02em}
@@ -13,16 +14,16 @@ body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#15
 .logo{width:120px;height:120px;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.9),0 12px 26px rgba(0,0,0,.3)}
 .big .logo{width:170px;height:170px}
 .arr{display:inline-block;margin-right:6px;font-size:.8em}
-#stk{position:absolute;right:56px;top:604px;transform:rotate(-5deg);background:#4FC3F7;color:#0E2235;font-weight:900;font-size:30px;letter-spacing:.04em;padding:12px 22px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);border:4px solid #fff;z-index:5}
+#stk{position:absolute;right:56px;top:650px;transform:rotate(-5deg);background:#4FC3F7;color:#0E2235;font-weight:900;font-size:30px;letter-spacing:.04em;padding:12px 22px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);border:4px solid #fff;z-index:5}
 .g1{background:#1E8E4E}.g2{background:#23A65A}.g3{background:#2BBF68}.g0{background:#17663A}
 .big{grid-row:1/3}
 .idx b{font-size:34px}.idx span{font-size:40px}
-#bar{position:absolute;left:0;top:600px;width:1080px;height:6px;background:#4FC3F7}
-#pill{position:absolute;left:64px;top:568px;display:flex;align-items:stretch;height:64px;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#bar{position:absolute;left:0;top:688px;width:1080px;height:6px;background:#4FC3F7}
+#pill{position:absolute;left:64px;top:656px;display:flex;align-items:stretch;height:64px;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 #pill .l{display:flex;align-items:center;gap:12px;background:#E5484D;color:#fff;font-weight:900;font-size:26px;letter-spacing:.1em;padding:0 22px}
 #pill .l i{width:14px;height:14px;border-radius:50%;background:#fff;display:block;box-shadow:0 0 0 5px rgba(255,255,255,.3)}
 #pill .r{display:flex;align-items:center;background:#fff;color:#152F46;font-weight:900;font-size:26px;letter-spacing:.06em;padding:0 22px}
-#txt{position:absolute;left:64px;right:64px;top:690px;display:flex;flex-direction:column;gap:26px}
+#txt{position:absolute;left:64px;right:64px;top:776px;display:flex;flex-direction:column;gap:26px}
 h1{margin:0;font-weight:900;font-size:80px;line-height:.98;letter-spacing:-.025em;text-transform:uppercase}
 h1 .a{color:#4FC3F7}
 p{margin:0;font-weight:700;font-size:36px;line-height:1.22;color:#DCE6EF}
@@ -30,21 +31,13 @@ p{margin:0;font-weight:700;font-size:36px;line-height:1.22;color:#DCE6EF}
 #pie img{width:200px}
 #pie span{font-size:24px;font-weight:700;color:#9FB4C7}
 </style></head><body>
-<div id="viz">
- <div class="t g3 big"><img class="logo" src="logo-microsoft.png"><b>MSFT</b><span><i class="arr">▲</i>6.7%</span></div>
- <div class="t g2" style="flex-direction:row;gap:22px"><img class="logo" src="logo-amazon.png"><div style="display:flex;flex-direction:column;align-items:flex-start"><b style="font-size:46px">AMZN</b><span><i class="arr">▲</i>6.1%</span></div></div>
- <div class="t g2" style="flex-direction:row;gap:22px"><img class="logo" src="logo-apple.png"><div style="display:flex;flex-direction:column;align-items:flex-start"><b style="font-size:46px">AAPL</b><span><i class="arr">▲</i>5.3%</span></div></div>
- <div class="t g1" style="grid-column:2/4"><small>la mejor sesión del año para el Dow</small><b>DOW JONES</b><span><i class="arr">▲</i>1,569 puntos</span></div>
- <div class="t g0 idx"><b>DOW</b><span><i class="arr">▲</i>3.0%</span></div>
- <div class="t g0 idx"><b>S&amp;P 500</b><span><i class="arr">▲</i>1.6%</span></div>
- <div class="t g0 idx"><b>NASDAQ</b><span><i class="arr">▲</i>1.4%</span></div>
-</div>
+<div id="foto"></div>
 <div id="stk">TODO EN VERDE</div>
 <div id="bar"></div>
 <div id="pill"><span class="l"><i></i>HOY</span><span class="r">WALL STREET</span></div>
 <div id="txt" class="chk">
  <h1 class="chk">Wall Street tiene su <span class="a">mejor día del año</span></h1>
- <p class="chk">El Dow subió 1,569 puntos (+3%), el mayor rebote después de unas elecciones intermedias en 44 años. Microsoft, Amazon y Apple, arriba de 5%.</p>
+ <p class="chk">El Dow subió 1,569 puntos (+3%), el mayor rebote después de unas elecciones intermedias en 44 años. Microsoft +6.7%, Amazon +6.1% y Apple +5.3%.</p>
 </div>
 <div id="pie"><img src="../../../brand/logo-horizontal-transparente.png"><span>fuente: Motley Fool, Yahoo Finance</span></div>
 </body></html>
