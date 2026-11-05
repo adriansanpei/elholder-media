@@ -1,0 +1,30 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../../../plantilla/base.css"><style>:root{--acento:#4FC3F7}
+.chip{display:inline-flex;align-items:center;gap:12px;background:#E5484D;color:#fff;font-weight:900;font-size:26px;letter-spacing:.1em;padding:10px 20px;border-radius:8px}
+.chip i{width:12px;height:12px;border-radius:50%;background:#fff;display:block}
+.card{background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.16);border-radius:26px;padding:28px 32px;display:flex;flex-direction:column;gap:6px}
+.card .k{font-size:24px;font-weight:800;color:#C9D6E2;letter-spacing:.05em;text-transform:uppercase}
+.card .big{font-size:88px;line-height:.92;font-weight:900;letter-spacing:-.045em}
+.card .s{font-size:28px;font-weight:700;color:#C9D6E2;line-height:1.2}
+.num{display:flex;gap:24px;align-items:flex-start;border-top:2px solid rgba(255,255,255,.2);padding-top:22px}
+.num b{font-size:56px;line-height:.9;font-weight:900;color:var(--acento);width:76px;flex:none}
+.num p{margin:0;font-size:40px;line-height:1.08;font-weight:800}
+.num p span{display:block;margin-top:6px;font-size:29px;font-weight:700;color:#C9D6E2}
+</style></head><body>
+<!-- PORTADA · Koemmandment: números específicos + advertencia -->
+<div class="slide">
+  <div class="bg" style="background-image:url(../fondos/ueno-banco.jpg);background-position:76% center;filter:saturate(.85)"></div>
+  <div class="capa" style="background:linear-gradient(180deg,rgba(21,47,70,.35) 0%,rgba(21,47,70,.15) 30%,rgba(21,47,70,.6) 55%,#152F46 78%)"></div>
+  <svg viewBox="0 0 1080 1350" style="position:absolute;inset:0" fill="none">
+    <defs><filter id="gl" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <polyline filter="url(#gl)" points="40,190 190,230 290,205 400,320 500,300 610,470 700,440 800,640 870,610 1000,820" stroke="#FF4D5A" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+    <polygon points="1040,875 965,840 1020,790" fill="#FF4D5A" filter="url(#gl)"/>
+  </svg>
+  <div style="position:absolute;right:56px;top:64px;width:250px;height:150px;transform:rotate(6deg);border:6px solid #fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.45)"><div style="width:100%;height:100%;background:url(../fondos/bandera-paraguay.jpg) center/cover"></div></div>
+  <div class="top" style="align-items:center;right:auto"><img src="../../../brand/logo-horizontal-transparente.png" alt="El Holder" style="width:240px;height:auto"></div>
+  <div class="abajo" style="bottom:140px;gap:22px">
+    <span class="chip" style="align-self:flex-start"><i></i>PARAGUAY</span>
+    <h1 class="t-xl" style="font-size:104px">casi <span class="acento">3 millones</span> de personas se quedaron sin su dinero.</h1>
+    <p class="t-s" style="font-size:40px">de un día para otro. así cayó Ueno Bank.</p>
+  </div>
+  <div class="pie"><span class="handle">@elholder_</span><span class="handle">desliza <span class="acento">→</span></span></div>
+</div></body></html>
