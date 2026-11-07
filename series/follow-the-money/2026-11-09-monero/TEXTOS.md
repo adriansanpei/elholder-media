@@ -3,11 +3,13 @@
 ## Hilo de X (voz de Adrián)
 
 1/
-El dinero que no se puede seguir.
+2026 viene rojo para cripto: bitcoin −13%, ethereum −25%, solana −28%.
 
-Monero vale $11.6 billones, mueve ~$157 millones al día… y nadie puede ver quién manda, a quién, ni cuánto.
+Y una moneda va +41%.
 
-Hoy en Follow the Money le hice el ejercicio a la cripto diseñada para que no la sigas 🧵
+Es la única que está diseñada para que nadie pueda seguir su dinero.
+
+Hoy en Follow the Money: Monero 🧵
 
 2/
 En Bitcoin todo es público. Por eso hay empresas enteras rastreando wallets.
@@ -18,13 +20,17 @@ Monero esconde 3 cosas:
 • cuánto (montos cifrados)
 
 3/
-Lo que sí se puede medir (Token Terminal, 5 nov):
-• precio: $617
-• valor de mercado: $11.6 billones (#12 en cripto)
-• +79% en un año
-• $4.12 billones de volumen en 30 días
+Lo que sí se puede medir: el precio.
 
-Lo que NO hay: comisiones, ingresos ni usuarios. La red no los deja ver.
+Del 1 de enero al 6 de noviembre (CoinGecko):
+• monero +41%
+• bitcoin −13%
+• ethereum −25%
+• xrp −37%
+
+Valor de mercado: $11.6 billones, #12 en cripto. Volumen: $4.12 billones en 30 días (Token Terminal).
+
+Lo que NO hay: comisiones, ingresos ni usuarios. Sabemos que alguien compra. No sabemos quién.
 
 4/
 El único dinero que sí se ve es el de las monedas nuevas.
@@ -64,11 +70,11 @@ elholder.com/subscribe
 
 ## Descripción de Instagram
 
-El dinero que no se puede seguir 🕵️
-Monero vale $11.6 billones y nadie ve quién lo mueve. Así que seguimos lo único que sí se ve.
++41% en 2026 mientras bitcoin cae 13% 🟢
+Monero va contra la corriente en un año rojo para cripto… y nadie puede ver quién está comprando.
 
 • Cómo esconde quién manda, quién recibe y cuánto
-• Lo que sí se mide: precio, valor de mercado y volumen
+• El precio: +41% en el año vs −13% de bitcoin y −25% de ethereum
 • A dónde va el dinero visible: ~$266 mil al día a los mineros
 • Los riesgos: exchanges que lo sacan, la UE en 2027 y la minería concentrada
 
@@ -76,7 +82,7 @@ Monero vale $11.6 billones y nadie ve quién lo mueve. Así que seguimos lo úni
 
 📩 Follow the Money cada lunes: suscríbete gratis en el link de la bio.
 
-Datos: Token Terminal y CoinGecko (5–6 nov 2026), getmonero.org, The Block, TRM Labs.
-Contenido educativo, no es recomendación de inversión. Cripto es de alto riesgo.
+Datos: CoinGecko (1 ene – 6 nov 2026), Token Terminal (5 nov 2026), getmonero.org, The Block, TRM Labs.
+Contenido educativo, no es recomendación de inversión. Rendimientos pasados no garantizan nada; cripto es de alto riesgo.
 
 #monero #xmr #criptomonedas #privacidad #elholder
