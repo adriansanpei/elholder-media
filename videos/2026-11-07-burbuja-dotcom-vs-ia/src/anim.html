@@ -4,28 +4,28 @@
 @font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
 html,body{margin:0;padding:0}*{box-sizing:border-box}
 body{width:1080px;height:1920px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
-#logo{position:absolute;left:64px;top:150px;width:250px}
-#chip{position:absolute;right:64px;top:162px;border:3px solid #4FC3F7;color:#4FC3F7;border-radius:8px;padding:8px 18px;font-size:24px;font-weight:900;letter-spacing:.12em}
-#tit{position:absolute;left:60px;top:270px;font-size:98px;line-height:1;white-space:nowrap;font-weight:900;letter-spacing:-.05em}
+#logo{position:absolute;left:64px;top:250px;width:230px}
+#chip{position:absolute;right:64px;top:258px;border:3px solid #4FC3F7;color:#4FC3F7;border-radius:8px;padding:8px 18px;font-size:24px;font-weight:900;letter-spacing:.12em}
+#tit{position:absolute;left:60px;top:340px;font-size:92px;line-height:1;white-space:nowrap;font-weight:900;letter-spacing:-.05em}
 #tit span{color:#4FC3F7}
-#sub{position:absolute;left:64px;top:385px;font-size:36px;font-weight:800;color:#C9D6E2;letter-spacing:-.02em}
-#leg{position:absolute;left:64px;top:445px;display:flex;gap:40px}
+#sub{position:absolute;left:64px;top:448px;font-size:34px;font-weight:800;color:#C9D6E2;letter-spacing:-.02em}
+#leg{position:absolute;left:64px;top:502px;display:flex;gap:40px}
 .tag{display:flex;align-items:center;gap:12px;white-space:nowrap}
 .tag i{width:34px;height:7px;border-radius:4px;display:inline-block}
 .tag b{font-size:26px;font-weight:900;letter-spacing:.02em}
 .tag span{font-size:24px;font-weight:700;color:#9FB4C7}
-#card{position:absolute;left:40px;right:40px;top:520px;height:980px;border-radius:32px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.10)}
-#cnt{position:absolute;right:84px;top:552px;font-size:24px;font-weight:800;color:#9FB4C7;letter-spacing:.06em;text-align:right}
-#cnt b{display:block;font-size:48px;color:#fff;letter-spacing:-.03em;line-height:1}
+#card{position:absolute;left:40px;right:40px;top:570px;height:600px;border-radius:32px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.10)}
+#cnt{position:absolute;right:84px;top:596px;font-size:22px;font-weight:800;color:#9FB4C7;letter-spacing:.06em;text-align:right}
+#cnt b{display:block;font-size:42px;color:#fff;letter-spacing:-.03em;line-height:1}
 svg{position:absolute;left:0;top:0}
-#tab{position:absolute;left:40px;right:40px;top:1530px;height:270px;border-radius:28px;background:#0F2538;border:2px solid rgba(255,255,255,.12);padding:22px 36px}
+#tab{position:absolute;left:40px;right:40px;top:1190px;height:230px;border-radius:28px;background:#0F2538;border:2px solid rgba(255,255,255,.12);padding:18px 32px}
 #tab table{width:100%;border-collapse:collapse}
 #tab th{font-size:20px;font-weight:800;color:#9FB4C7;letter-spacing:.06em;text-align:left;padding:0 0 12px}
-#tab td{font-size:38px;font-weight:900;letter-spacing:-.03em;padding:6px 0;vertical-align:top;line-height:1}
+#tab td{font-size:34px;font-weight:900;letter-spacing:-.03em;padding:6px 0;vertical-align:top;line-height:1}
 #tab td small{display:block;font-size:19px;font-weight:700;color:#9FB4C7;letter-spacing:0;margin-top:4px}
 #tab td.n{font-size:30px}
-#cred{position:absolute;left:64px;top:1830px;font-size:22px;font-weight:700;color:#9FB4C7}
-#cred2{position:absolute;right:64px;top:1830px;font-size:22px;font-weight:700;color:#9FB4C7}
+#cred{position:absolute;left:64px;top:1440px;font-size:21px;font-weight:700;color:#9FB4C7}
+#cred2{position:absolute;right:64px;top:1440px;font-size:21px;font-weight:700;color:#9FB4C7}
 </style></head><body>
 <img id="logo" src="../../../brand/logo-horizontal-transparente.png">
 <span id="chip">CICLOS DE MERCADO</span>
@@ -44,7 +44,7 @@ svg{position:absolute;left:0;top:0}
 <div id="cred2">datos: gráfica original compartida en X</div>
 <script>
 let DATA=null;
-const X0=120,X1=1000,Y0=1440,YT=640,VMAX=160,DMAX=1350;
+const X0=120,X1=960,Y0=1080,YT=690,VMAX=160,DMAX=1350;
 const AIEND=1019,AIPK=997,DCPK=1320;
 const px=d=>X0+(X1-X0)*d/DMAX, py=v=>Y0-(Y0-YT)*v/VMAX;
 const fmt=n=>n.toLocaleString('en-US');
@@ -55,8 +55,8 @@ window.draw=function(d){
  h+='<defs><linearGradient id="go" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB454" stop-opacity=".35"/><stop offset="1" stop-color="#FFB454" stop-opacity="0"/></linearGradient><linearGradient id="gc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FC3F7" stop-opacity=".35"/><stop offset="1" stop-color="#4FC3F7" stop-opacity="0"/></linearGradient><filter id="gl"><feGaussianBlur stdDeviation="6"/></filter></defs>';
  for(const v of [25,50,75,100,125,150]){h+=`<line x1="${X0}" x2="${X1}" y1="${py(v)}" y2="${py(v)}" stroke="rgba(255,255,255,.08)" stroke-width="2"/><text x="${X0-14}" y="${py(v)+8}" fill="#9FB4C7" font-size="22" font-weight="700" text-anchor="end" font-family="IT">${v}×</text>`;}
  h+=`<line x1="${X0}" x2="${X1}" y1="${Y0}" y2="${Y0}" stroke="rgba(255,255,255,.3)" stroke-width="2"/><text x="${X0-14}" y="${Y0+8}" fill="#9FB4C7" font-size="22" font-weight="700" text-anchor="end" font-family="IT">0×</text>`;
- for(const day of [0,250,500,750,1000,1250]){h+=`<text x="${px(day)}" y="${Y0+40}" fill="${day<=d?'#DCE6EF':'#5E7A93'}" font-size="22" font-weight="800" text-anchor="middle" font-family="IT">${fmt(day)}</text>`;}
- h+=`<text x="${(X0+X1)/2}" y="${Y0+84}" fill="#9FB4C7" font-size="22" font-weight="800" text-anchor="middle" font-family="IT" letter-spacing="2">DÍAS DE BOLSA DESDE EL PRIMER CIERRE</text>`;
+ for(const day of [0,250,500,750,1000,1250]){h+=`<text x="${px(day)}" y="${Y0+36}" fill="${day<=d?'#DCE6EF':'#5E7A93'}" font-size="22" font-weight="800" text-anchor="middle" font-family="IT">${fmt(day)}</text>`;}
+ h+=`<text x="${(X0+X1)/2}" y="${Y0+72}" fill="#9FB4C7" font-size="20" font-weight="800" text-anchor="middle" font-family="IT" letter-spacing="2">DÍAS DE BOLSA DESDE EL PRIMER CIERRE</text>`;
  if(d>=AIEND){h+=`<line x1="${px(AIEND)}" x2="${px(AIEND)}" y1="${YT-10}" y2="${Y0}" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="8 8"/>`;}
  if(d>0.5){
   const dc=Math.min(d,DCPK), da=Math.min(d,AIEND);
