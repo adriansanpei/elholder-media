@@ -1,0 +1,84 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0;padding:0}*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#logo{position:absolute;left:64px;top:150px;width:250px}
+#chip{position:absolute;right:64px;top:162px;border:3px solid #4FC3F7;color:#4FC3F7;border-radius:8px;padding:8px 18px;font-size:24px;font-weight:900;letter-spacing:.12em}
+#tit{position:absolute;left:60px;top:270px;font-size:98px;line-height:1;white-space:nowrap;font-weight:900;letter-spacing:-.05em}
+#tit span{color:#4FC3F7}
+#sub{position:absolute;left:64px;top:385px;font-size:36px;font-weight:800;color:#C9D6E2;letter-spacing:-.02em}
+#leg{position:absolute;left:64px;top:445px;display:flex;gap:40px}
+.tag{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.tag i{width:34px;height:7px;border-radius:4px;display:inline-block}
+.tag b{font-size:26px;font-weight:900;letter-spacing:.02em}
+.tag span{font-size:24px;font-weight:700;color:#9FB4C7}
+#card{position:absolute;left:40px;right:40px;top:520px;height:980px;border-radius:32px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.10)}
+#cnt{position:absolute;right:84px;top:552px;font-size:24px;font-weight:800;color:#9FB4C7;letter-spacing:.06em;text-align:right}
+#cnt b{display:block;font-size:48px;color:#fff;letter-spacing:-.03em;line-height:1}
+svg{position:absolute;left:0;top:0}
+#tab{position:absolute;left:40px;right:40px;top:1530px;height:270px;border-radius:28px;background:#0F2538;border:2px solid rgba(255,255,255,.12);padding:22px 36px}
+#tab table{width:100%;border-collapse:collapse}
+#tab th{font-size:20px;font-weight:800;color:#9FB4C7;letter-spacing:.06em;text-align:left;padding:0 0 12px}
+#tab td{font-size:38px;font-weight:900;letter-spacing:-.03em;padding:6px 0;vertical-align:top;line-height:1}
+#tab td small{display:block;font-size:19px;font-weight:700;color:#9FB4C7;letter-spacing:0;margin-top:4px}
+#tab td.n{font-size:30px}
+#cred{position:absolute;left:64px;top:1830px;font-size:22px;font-weight:700;color:#9FB4C7}
+#cred2{position:absolute;right:64px;top:1830px;font-size:22px;font-weight:700;color:#9FB4C7}
+</style></head><body>
+<img id="logo" src="../../../brand/logo-horizontal-transparente.png">
+<span id="chip">CICLOS DE MERCADO</span>
+<div id="tit">Burbuja .com vs <span>IA</span></div>
+<div id="sub">dos canastas de acciones alineadas por día de bolsa</div>
+<div id="leg"><div class="tag"><i style="background:#FFB454"></i><b style="color:#FFB454">DOT-COM</b><span>desde ene 1995</span></div><div class="tag"><i style="background:#4FC3F7"></i><b style="color:#4FC3F7">IA</b><span>desde oct 2022</span></div></div>
+<div id="card"></div>
+<div id="cnt">DÍA DE BOLSA<b id="cntv">0</b></div>
+<svg id="s" width="1080" height="1920"></svg>
+<div id="tab"><table>
+<tr><th style="width:24%">ÍNDICE</th><th style="width:27%" id="h1">GANANCIA</th><th style="width:27%">GANANCIA MÁXIMA</th><th>DÍAS AL PICO</th></tr>
+<tr><td class="n" style="color:#FFB454">● Dot-com</td><td id="o1">—</td><td id="o2">—</td><td id="o3">—</td></tr>
+<tr><td class="n" style="color:#4FC3F7">● IA</td><td id="c1">—</td><td id="c2">—</td><td id="c3">—</td></tr>
+</table></div>
+<div id="cred">cierres diarios · escala lineal · primer cierre = 1×</div>
+<div id="cred2">datos: gráfica original compartida en X</div>
+<script>
+let DATA=null;
+const X0=120,X1=1000,Y0=1440,YT=640,VMAX=160,DMAX=1350;
+const AIEND=1019,AIPK=997,DCPK=1320;
+const px=d=>X0+(X1-X0)*d/DMAX, py=v=>Y0-(Y0-YT)*v/VMAX;
+const fmt=n=>n.toLocaleString('en-US');
+function path(arr,d){let p='';const n=Math.min(arr.length-1,Math.floor(d));for(let i=0;i<=n;i++){p+=(i?'L':'M')+px(i).toFixed(1)+','+py(arr[i]).toFixed(1);}return p;}
+function pct(v){return '+'+fmt(Math.round((v-1)*1000)/10)+'%';}
+window.draw=function(d){
+ const s=document.getElementById('s');let h='';
+ h+='<defs><linearGradient id="go" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB454" stop-opacity=".35"/><stop offset="1" stop-color="#FFB454" stop-opacity="0"/></linearGradient><linearGradient id="gc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FC3F7" stop-opacity=".35"/><stop offset="1" stop-color="#4FC3F7" stop-opacity="0"/></linearGradient><filter id="gl"><feGaussianBlur stdDeviation="6"/></filter></defs>';
+ for(const v of [25,50,75,100,125,150]){h+=`<line x1="${X0}" x2="${X1}" y1="${py(v)}" y2="${py(v)}" stroke="rgba(255,255,255,.08)" stroke-width="2"/><text x="${X0-14}" y="${py(v)+8}" fill="#9FB4C7" font-size="22" font-weight="700" text-anchor="end" font-family="IT">${v}×</text>`;}
+ h+=`<line x1="${X0}" x2="${X1}" y1="${Y0}" y2="${Y0}" stroke="rgba(255,255,255,.3)" stroke-width="2"/><text x="${X0-14}" y="${Y0+8}" fill="#9FB4C7" font-size="22" font-weight="700" text-anchor="end" font-family="IT">0×</text>`;
+ for(const day of [0,250,500,750,1000,1250]){h+=`<text x="${px(day)}" y="${Y0+40}" fill="${day<=d?'#DCE6EF':'#5E7A93'}" font-size="22" font-weight="800" text-anchor="middle" font-family="IT">${fmt(day)}</text>`;}
+ h+=`<text x="${(X0+X1)/2}" y="${Y0+84}" fill="#9FB4C7" font-size="22" font-weight="800" text-anchor="middle" font-family="IT" letter-spacing="2">DÍAS DE BOLSA DESDE EL PRIMER CIERRE</text>`;
+ if(d>=AIEND){h+=`<line x1="${px(AIEND)}" x2="${px(AIEND)}" y1="${YT-10}" y2="${Y0}" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="8 8"/>`;}
+ if(d>0.5){
+  const dc=Math.min(d,DCPK), da=Math.min(d,AIEND);
+  const po=path(DATA.o,dc), pc=path(DATA.c,da);
+  h+=`<path d="${po}L${px(dc)},${Y0}L${X0},${Y0}Z" fill="url(#go)"/><path d="${pc}L${px(da)},${Y0}L${X0},${Y0}Z" fill="url(#gc)"/>`;
+  h+=`<path d="${po}" fill="none" stroke="#FFB454" stroke-width="12" stroke-opacity=".35" filter="url(#gl)"/><path d="${po}" fill="none" stroke="#FFB454" stroke-width="5" stroke-linejoin="round"/>`;
+  h+=`<path d="${pc}" fill="none" stroke="#4FC3F7" stroke-width="12" stroke-opacity=".35" filter="url(#gl)"/><path d="${pc}" fill="none" stroke="#4FC3F7" stroke-width="5" stroke-linejoin="round"/>`;
+  const vo=DATA.o[Math.floor(dc)], vc=DATA.c[Math.floor(da)];
+  h+=`<circle cx="${px(dc)}" cy="${py(vo)}" r="9" fill="#FFB454"/>`;
+  h+=`<circle cx="${px(da)}" cy="${py(vc)}" r="9" fill="#4FC3F7"/>`;
+  if(d>=AIPK){h+=`<circle cx="${px(AIPK)}" cy="${py(27.5)}" r="8" fill="#152F46" stroke="#4FC3F7" stroke-width="4"/><text x="${px(AIPK)-24}" y="${py(27.5)-34}" fill="#4FC3F7" font-size="24" font-weight="900" text-anchor="end" font-family="IT">PICO IA · 27.5×</text><line x1="${px(AIPK)-18}" y1="${py(27.5)-28}" x2="${px(AIPK)-4}" y2="${py(27.5)-10}" stroke="#4FC3F7" stroke-width="2"/>`;}
+  if(d>=AIEND){h+=`<text x="${px(AIEND)+22}" y="${py(16.1)+8}" fill="#4FC3F7" font-size="24" font-weight="900" font-family="IT">HOY · 16.1×</text>`;}
+  if(d>=DCPK){h+=`<text x="${px(DCPK)-22}" y="${py(151.7)+9}" fill="#FFB454" font-size="24" font-weight="900" text-anchor="end" font-family="IT">PICO DOT-COM · 151.7×</text>`;}
+  document.getElementById('cntv').textContent=fmt(Math.floor(d));
+  document.getElementById('o1').innerHTML=d>=AIEND?'+4,296.4%<small>14 ene 1999</small>':pct(vo);
+  document.getElementById('c1').innerHTML=(d>=AIEND?'+1,508.8%<small>5 nov 2026</small>':pct(vc));
+  document.getElementById('h1').textContent=d>=AIEND?'GANANCIA AL EMPATE':'GANANCIA';
+  document.getElementById('o2').innerHTML=d>=DCPK?'+15,065.9%<small>24 mar 2000</small>':'—';
+  document.getElementById('o3').innerHTML=d>=DCPK?'1,320<small>días de bolsa</small>':'—';
+  document.getElementById('c2').innerHTML=d>=AIPK?'+2,648.6%<small>6 oct 2026</small>':'—';
+  document.getElementById('c3').innerHTML=d>=AIPK?'997<small>días de bolsa</small>':'—';
+ }
+ s.innerHTML=h;
+}
+</script></body></html>
