@@ -63,9 +63,7 @@ Y la gran mejora de privacidad (FCMP++) sigue en pruebas, sin fecha.
 Contenido educativo, no es recomendación de inversión.
 
 8/
-El análisis completo, con las cuentas y las fuentes, sale el lunes en el newsletter.
-
-Follow the Money, cada lunes, gratis 👇
+Suscríbete para recibir Follow the Money cada lunes, gratis 👇
 elholder.com/subscribe
 
 ## Descripción de Instagram
