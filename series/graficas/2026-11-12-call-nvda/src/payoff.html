@@ -1,0 +1,59 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><style>
+@font-face{font-family:IT;font-weight:700;src:url('../../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:IT;font-weight:800;src:url('../../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:IT;font-weight:900;src:url('../../../../fonts/inter-tight-latin-900-normal.woff2')}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:860px;overflow:hidden;font-family:IT;color:#fff;background:#152F46;position:relative}
+h1{position:absolute;left:70px;top:40px;font-weight:900;font-size:44px;letter-spacing:-.03em;line-height:1.05}
+h1 span{color:#4FC3FF}
+.st{position:absolute;left:72px;top:150px;font-weight:700;font-size:24px;color:#C9D6E2}
+svg{position:absolute;left:0;top:0}
+text{font-family:IT}
+.logo{position:absolute;left:70px;bottom:30px;height:38px}
+.src{position:absolute;right:70px;bottom:38px;font-weight:700;font-size:18px;color:#8FA3B7}
+</style></head><body>
+<h1>Call de NVDA con strike $95:<br><span>dónde ganas y dónde pierdes</span></h1>
+<div class="st">Prima pagada: $71.96 por acción · Resultado si lo mantienes hasta el vencimiento</div>
+<svg width="1200" height="860" viewBox="0 0 1200 860">
+ <!-- zonas -->
+ <polygon points="110,420 110,596 308,596 716,420" fill="#FF4D6D" opacity=".22"/>
+ <polygon points="716,420 1130,241 1130,420" fill="#5EE0A8" opacity=".22"/>
+ <!-- ejes -->
+ <line x1="110" y1="420" x2="1130" y2="420" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
+ <line x1="110" y1="210" x2="110" y2="640" stroke="rgba(255,255,255,.2)" stroke-width="2"/>
+ <!-- strike y precio de hoy -->
+ <line x1="308" y1="420" x2="308" y2="640" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-dasharray="7 7"/>
+ <line x1="701" y1="250" x2="701" y2="640" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-dasharray="7 7"/>
+ <!-- linea de resultado -->
+ <polyline points="110,596 308,596 716,420" fill="none" stroke="#FF4D6D" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+ <polyline points="716,420 1130,241" fill="none" stroke="#5EE0A8" stroke-width="6" stroke-linecap="round"/>
+ <!-- breakeven -->
+ <line x1="716" y1="420" x2="716" y2="352" stroke="#4FC3FF" stroke-width="2"/>
+ <circle cx="716" cy="420" r="11" fill="#4FC3FF" stroke="#152F46" stroke-width="4"/>
+ <rect x="596" y="282" width="240" height="70" rx="12" fill="#4FC3FF"/>
+ <text x="716" y="311" text-anchor="middle" fill="#152F46" font-size="20" font-weight="800">BREAKEVEN</text>
+ <text x="716" y="340" text-anchor="middle" fill="#152F46" font-size="26" font-weight="900">$166.96</text>
+ <!-- textos de zonas -->
+ <text x="209" y="485" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">Pierdes toda</text>
+ <text x="209" y="511" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">la prima</text>
+ <text x="209" y="550" text-anchor="middle" fill="#FF4D6D" font-size="30" font-weight="900">−$71.96</text>
+ <text x="440" y="458" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">Pierdes solo una</text>
+ <text x="440" y="484" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">parte de la prima</text>
+ <text x="985" y="372" text-anchor="middle" fill="#5EE0A8" font-size="34" font-weight="900">Aquí ganas</text>
+ <text x="985" y="402" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">+$1 por cada $1 que suba</text>
+ <!-- etiquetas eje y -->
+ <text x="98" y="427" text-anchor="end" fill="#C9D6E2" font-size="20" font-weight="800">$0</text>
+ <text x="118" y="232" fill="#5EE0A8" font-size="19" font-weight="800">▲ GANANCIA</text>
+ <text x="118" y="632" fill="#FF4D6D" font-size="19" font-weight="800">▼ PÉRDIDA</text>
+ <!-- etiquetas strike / hoy -->
+ <rect x="248" y="648" width="120" height="34" rx="8" fill="#fff"/>
+ <text x="308" y="672" text-anchor="middle" fill="#152F46" font-size="19" font-weight="900">Strike $95</text>
+ <rect x="601" y="648" width="200" height="34" rx="8" fill="#fff"/>
+ <text x="701" y="672" text-anchor="middle" fill="#152F46" font-size="19" font-weight="900">NVDA hoy $164.26</text>
+ <text x="1130" y="672" text-anchor="end" fill="#8FA3B7" font-size="19" font-weight="800">$240</text>
+ <text x="110" y="672" fill="#8FA3B7" font-size="19" font-weight="800">$60</text>
+ <text x="620" y="722" text-anchor="middle" fill="#C9D6E2" font-size="21" font-weight="800">Precio de NVDA al vencimiento →</text>
+</svg>
+<img class="logo" src="../../../../brand/logo-horizontal-transparente.png">
+<div class="src">Ejemplo educativo con precios del 12 nov 2026 · No es asesoría financiera</div>
+</body></html>
