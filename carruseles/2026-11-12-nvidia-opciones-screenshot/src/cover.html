@@ -1,5 +1,22 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
 @font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
-html,body{margin:0}body{width:1080px;height:1350px;position:relative;overflow:hidden;background:url(cover-crop.png) top/1080px no-repeat;font-family:'IT';color:#fff}
-#d{position:absolute;right:140px;bottom:44px;font-size:34px;font-weight:800}#d span{color:#4FC3F7}
-</style></head><body><div id="d">desliza <span>→</span></div></body></html>
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#foto{position:absolute;left:0;top:0;width:1080px;height:800px;background:url(huang.jpg) 58% 20%/cover}
+#g{position:absolute;left:0;top:0;width:1080px;height:810px;background:linear-gradient(180deg,rgba(21,47,70,.55) 0,rgba(21,47,70,0) 22%,rgba(21,47,70,0) 55%,#152F46 100%)}
+#logo{position:absolute;left:64px;top:60px;width:230px}
+#b{position:absolute;right:56px;top:600px;display:flex;align-items:center;gap:14px;background:#E5484D;border-radius:18px;padding:14px 24px;transform:rotate(-4deg);box-shadow:0 14px 40px rgba(0,0,0,.5);font-weight:900}
+#t{position:absolute;left:64px;right:64px;top:770px}
+h1{margin:0;font-weight:900;font-size:122px;line-height:.93;letter-spacing:-.045em}
+h1 span{color:#4FC3F7}
+p{margin:30px 0 0;font-weight:800;font-size:46px;line-height:1.15;color:#DCE6EF;letter-spacing:-.02em}
+#d{position:absolute;right:64px;bottom:56px;font-size:32px;font-weight:800}#d span{color:#4FC3F7}
+</style></head><body>
+<div id="foto"></div><div id="g"></div>
+<img id="logo" src="../../../brand/logo-horizontal-transparente.png">
+<div id="b"><svg width="38" height="38" viewBox="0 0 24 24"><path d="M12 21 2 7h20z" fill="#fff"/></svg><span style="display:flex;flex-direction:column;line-height:.95"><span style="font-size:24px;letter-spacing:.08em;opacity:.9">NVDA</span><span style="font-size:56px;letter-spacing:-.03em">−37%</span></span></div>
+<div id="t"><h1>Así voy a hacer dinero <span>con NVIDIA.</span></h1><p>Al Don Huang se le calentó el chip...</p></div>
+<div id="d">desliza <span>→</span></div>
+</body></html>

@@ -2,7 +2,7 @@ import json, numpy as np, functools
 from PIL import Image
 S=2.25; H=1350; MAXH=1350
 info=json.load(open('info.json')); im=Image.open('full.png').convert('RGB'); a=np.asarray(im)
-start=int(info['marcador'][0]*S)-45; end=int(info['criterio'][1]*S)+70
+start=int(info['gm'][0]*S)-22; end=int(info['criterio'][1]*S)+70
 c=a[:,200:900,:].astype(int)
 blank=((c.max(axis=1)-c.min(axis=1)).max(axis=1)<=2)&(c.min(axis=1).min(axis=1)>=225)
 while not blank[start]: start+=1
@@ -12,7 +12,7 @@ while r<end:
         r0=r
         while r<end and blank[r]: r+=1
         m=(r0+r)//2
-        if r-r0>=45 and not any(i0*S-4<m<i1*S+4 for i0,i1 in info['imgs']): runs.append(m)
+        if r-r0>=38 and not any(i0*S-4<m<i1*S+4 for i0,i1 in info['imgs']): runs.append(m)
     else: r+=1
 pts=[start]+[p for p in runs if start+200<p<end-200]+[end]; n=len(pts)
 @functools.lru_cache(None)
