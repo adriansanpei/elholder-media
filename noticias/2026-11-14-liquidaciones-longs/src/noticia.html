@@ -4,47 +4,33 @@
 @font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
 html,body{margin:0}*{box-sizing:border-box}
 body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
-#map{position:absolute;left:0;top:0;width:1080px;height:640px;display:grid;grid-template-columns:58% 21% 21%;grid-template-rows:42% 26% 32%;gap:5px;background:#3a0b10}
-.b{display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;text-align:center}
-.b b{font-size:40px;letter-spacing:-.02em}.b span{font-size:30px;opacity:.95}
-#btc{grid-row:1/4;background:radial-gradient(circle at 50% 50%,#ff3b30 0%,#c4161c 70%)}#btc b{font-size:72px}#btc span{font-size:56px}
-#eth{grid-column:2/4;padding-top:80px;background:radial-gradient(circle,#ff4a3d,#d11d22)}#eth b{font-size:52px}#eth span{font-size:40px}
-#bnb{background:#d9241f}#xrp{background:#e8302a}
-#sol{background:#e3352d}#rest{background:repeating-linear-gradient(90deg,#b8141a 0 34px,#3a0b10 34px 38px),#b8141a;background-blend-mode:normal}
-#capa{position:absolute;left:0;top:0;width:1080px;height:720px;background:linear-gradient(180deg,rgba(21,47,70,.7) 0%,rgba(21,47,70,.15) 16%,rgba(21,47,70,.1) 62%,rgba(21,47,70,.92) 80%,#152F46 89%)}
-#logo{position:absolute;left:64px;top:56px;width:230px}
-#chip{position:absolute;right:64px;top:62px;display:flex;align-items:center;gap:12px;background:#E5484D;border-radius:8px;padding:12px 20px;font-weight:900;font-size:24px;letter-spacing:.1em;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-#chip i{width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.3)}
-#t{position:absolute;left:64px;right:64px;top:610px}
-#big{font-size:178px;font-weight:900;letter-spacing:-.06em;line-height:.9;color:#FF3B47;text-shadow:0 14px 50px rgba(0,0,0,.6)}
-#big small{font-size:96px;letter-spacing:-.04em}
-h1{margin:18px 0 0;font-size:66px;font-weight:900;line-height:1;letter-spacing:-.035em}
-.stats{display:flex;gap:16px;margin-top:38px}
-.st{flex:1;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:22px;padding:20px 22px}
-.st b{display:block;font-size:52px;font-weight:900;letter-spacing:-.04em;line-height:1}
-.st span{display:block;margin-top:8px;font-size:23px;font-weight:800;color:#C9D6E2;line-height:1.15}
-#pie{position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:flex-end}
-#pie span{font-size:24px;font-weight:700;color:#9FB4C7}
+#foto{position:absolute;left:0;top:0;width:1080px;height:700px;background:url(mapa.jpg) center top/cover}
+#sh{position:absolute;left:0;top:0;width:1080px;height:170px;background:linear-gradient(180deg,rgba(21,47,70,.55),rgba(21,47,70,0))}
+#logo{position:absolute;left:52px;top:44px;width:220px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+#bar{position:absolute;left:0;top:700px;width:1080px;height:6px;background:#4FC3F7}
+#pill{position:absolute;left:64px;top:668px;display:flex;align-items:stretch;height:64px;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#pill .l{display:flex;align-items:center;gap:12px;background:#E5484D;font-weight:900;font-size:26px;letter-spacing:.1em;padding:0 22px}
+#pill .l i{width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.3)}
+#pill .r{display:flex;align-items:center;background:#fff;color:#152F46;font-weight:900;font-size:26px;letter-spacing:.06em;padding:0 22px}
+#t{position:absolute;left:64px;right:64px;top:770px}
+#big{display:flex;align-items:baseline;gap:18px;line-height:.85}
+#big b{font-size:190px;font-weight:900;letter-spacing:-.065em;color:#FF3B47}
+#big span{font-size:86px;font-weight:900;letter-spacing:-.04em;color:#FF3B47}
+h1{margin:14px 0 0;font-size:62px;font-weight:900;line-height:1;letter-spacing:-.03em;text-transform:uppercase}
+h1 em{font-style:normal;color:#4FC3F7}
+p{margin:22px 0 0;font-size:34px;font-weight:700;line-height:1.22;color:#DCE6EF}
+p b{color:#fff}
+#pie{position:absolute;left:64px;right:64px;bottom:48px;display:flex;justify-content:flex-end}
+#pie span{font-size:23px;font-weight:700;color:#9FB4C7}
 </style></head><body>
-<div id="map">
-  <div class="b" id="btc"><b>Bitcoin</b><span>−6.1%</span></div>
-  <div class="b" id="eth"><b>Ethereum</b><span>−8.4%</span></div>
-  <div class="b" id="bnb"><b>BNB</b><span>−7.7%</span></div>
-  <div class="b" id="xrp"><b>XRP</b><span>−10.0%</span></div>
-  <div class="b" id="sol"><b>Solana</b><span>−10.3%</span></div>
-  <div class="b" id="rest"></div>
-</div>
-<div id="capa"></div>
+<div id="foto"></div><div id="sh"></div>
 <img id="logo" src="../../../brand/logo-horizontal-transparente.png">
-<div id="chip"><i></i>ÚLTIMA HORA</div>
+<div id="bar"></div>
+<div id="pill"><span class="l"><i></i>ÚLTIMA HORA</span><span class="r">CRIPTO</span></div>
 <div id="t">
-  <div id="big">$1.8 <small>billones</small></div>
-  <h1>en longs liquidados<br><span style="color:#FF3B47">en solo 24 horas.</span></h1>
-  <div class="stats">
-    <div class="st"><b>316,423</b><span>traders liquidados</span></div>
-    <div class="st"><b style="color:#FF3B47">93%</b><span>eran longs</span></div>
-    <div class="st"><b>$16M</b><span>la mayor orden: ETH en Binance</span></div>
-  </div>
+  <div id="big"><b>$1.8</b><span>billones</span></div>
+  <h1>en longs liquidados<br><em>en solo 24 horas</em></h1>
+  <p><b>316,423 traders</b> fueron liquidados y 93% del dinero eran apuestas al alza. La mayor orden: $16M en ETH.</p>
 </div>
-<div id="pie"><span>Fuentes: CoinGlass, CoinGecko</span></div>
+<div id="pie"><span>Fuentes: CoinGlass, CoinGecko · Gráfica vía Watcher.Guru</span></div>
 </body></html>
