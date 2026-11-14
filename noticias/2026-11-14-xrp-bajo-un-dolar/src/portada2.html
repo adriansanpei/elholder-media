@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#bg{position:absolute;inset:0;background:url(foto.jpg) center/cover}
+#capa{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,47,70,.55) 0%,rgba(21,47,70,.05) 18%,rgba(21,47,70,.15) 42%,rgba(21,47,70,.9) 64%,#152F46 76%)}
+#logo{position:absolute;left:64px;top:60px;width:230px}
+#chip{position:absolute;right:64px;top:66px;display:flex;align-items:center;gap:12px;background:#E5484D;border-radius:8px;padding:12px 20px;font-weight:900;font-size:24px;letter-spacing:.1em}
+#chip i{width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.3)}
+#mark{position:absolute;right:64px;top:230px;width:160px;height:160px;border-radius:50%;background:url(xrp-mark.png) center/cover;border:6px solid #fff;box-shadow:0 18px 50px rgba(0,0,0,.6)}
+#price{position:absolute;left:52px;top:330px;font-size:280px;font-weight:900;letter-spacing:-.07em;line-height:1;text-shadow:0 12px 60px rgba(0,0,0,.6)}
+#t{position:absolute;left:64px;right:64px;top:760px}
+#t p{margin:16px 0 0;font-size:38px;font-weight:800;color:#DCE6EF;letter-spacing:-.01em}
+h1{margin:0;font-size:96px;font-weight:900;line-height:.95;letter-spacing:-.04em}
+h1 span{color:#FF4D5A}
+.stats{display:flex;gap:18px;margin-top:34px}
+.st{flex:1;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:22px;padding:20px 22px}
+.st b{display:block;font-size:58px;font-weight:900;letter-spacing:-.04em;line-height:1;color:#FF4D5A}
+.st span{display:block;margin-top:8px;font-size:24px;font-weight:800;color:#C9D6E2}
+#pie{position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:flex-end}
+#pie span{font-size:24px;font-weight:700;color:#9FB4C7}
+</style></head><body>
+<div id="bg"></div><div id="capa"></div>
+<img id="logo" src="../../../brand/logo-horizontal-transparente.png">
+<div id="chip"><i></i>ÚLTIMA HORA</div>
+<div id="mark"></div>
+<div id="price">$0.95</div>
+<div id="t">
+  <h1>XRP se rompe:<br><span>abajo de $1.</span></h1>
+  <p>Su nivel más bajo desde noviembre de 2024.</p>
+  <div class="stats">
+    <div class="st"><b>−17%</b><span>en la semana</span></div>
+    <div class="st"><b>−57%</b><span>en un año</span></div>
+    <div class="st"><b style="color:#fff">#6</b><span>fuera del top 5</span></div>
+  </div>
+</div>
+<div id="pie"><span>Fuentes: CoinGecko, U.Today</span></div>
+</body></html>
