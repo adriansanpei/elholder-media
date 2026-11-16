@@ -11,6 +11,10 @@ JS=r'''
  const ip=smallest('In partnership with'); if(ip) rm(ip);
  for(const i of [...document.images]) if(/kalshi/i.test(i.src)) rm(i);
  const ro=smallest('Read online'); if(ro&&ro.getBoundingClientRect().height<80) rm(ro);
+ const sm=(t)=>{let best=null;for(const e of document.querySelectorAll('p,li,td,div,span,a,figcaption,small')){if(e.textContent.includes(t)){if(!best||best.contains(e))best=e}}return best};
+ const blk=(t)=>{let e=sm(t); while(e&&!['P','LI','TD'].includes(e.tagName)) e=e.parentElement; return e};
+ for(const t of ['Ver noticia completa','defi.com es el patrocinador','Lo que ofrece','Todavía no sale al mercado','Una sola cuenta de autocustodia para','Depositar','Gastar','Invertir y mover tu dinero']){const e=blk(t); if(e){ if(e.tagName==='TD'){const tr=e.closest('tr'); rm(tr||e)} else rm(e)}}
+ const inv=sm('Invertir y mover tu dinero'); if(inv) inv.innerHTML='<b>Invertir y mover tu dinero con tarjeta Visa</b>';
 }
 '''
 with sync_playwright() as p:
@@ -18,6 +22,6 @@ with sync_playwright() as p:
     pg.goto('file://'+sys.argv[1],wait_until='networkidle'); pg.evaluate(JS); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(1500)
     info=pg.evaluate(r'''()=>{const y=t=>{let best=null;for(const e of document.querySelectorAll('table,div,tr,td,p,h1,h2,h3')){if(e.textContent.includes(t)){if(!best||best.contains(e))best=e}}return best?best.getBoundingClientRect():null};
       const r=o=>o?[o.top+scrollY,o.bottom+scrollY]:null;
-      return {imgs:[...document.images].map(i=>{const b=i.getBoundingClientRect();return [b.top+scrollY,b.bottom+scrollY]}).filter(b=>b[1]-b[0]>60), poll:r(y('DINOS QUÉ PIENSAS')), criterio:r(y('nada de esto es recomendación')), marcador:r(y('EL MARCADOR')), ftm:r(y('Follow the money: el negocio')), sponsor:r(y('SPONSOR')), abrazo:r(y('Nos leemos el miércoles')), gm:r(y('Hackeos a exchanges')), leer:r(y('Leer completo')), fonts:[...document.fonts].filter(f=>f.status=='loaded').map(f=>f.family)}}''')
+      return {imgs:[...document.images].map(i=>{const b=i.getBoundingClientRect();return [b.top+scrollY,b.bottom+scrollY]}).filter(b=>b[1]-b[0]>60), poll:r(y('DINOS QUÉ PIENSAS')), criterio:r(y('nada de esto es recomendación')), marcador:r(y('EL MARCADOR')), ftm:r(y('Follow the money: el negocio')), sponsor:r(y('SPONSOR')), una:r(y('En un solo lugar')), abrazo:r(y('Nos leemos el miércoles')), gm:r(y('Hackeos a exchanges')), leer:r(y('Leer completo')), fonts:[...document.fonts].filter(f=>f.status=='loaded').map(f=>f.family)}}''')
     print(json.dumps(info)); json.dump(info,open('info.json','w'))
     pg.screenshot(path='full.png',full_page=True); b.close()
