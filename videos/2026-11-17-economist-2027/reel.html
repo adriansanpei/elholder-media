@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#top{position:absolute;left:60px;right:60px;top:235px;display:flex;align-items:center;justify-content:space-between}
+#top img{width:170px}#top span{font-weight:800;font-size:24px;letter-spacing:.14em;color:#9FB4C7}
+#bars{position:absolute;left:60px;right:60px;top:318px;display:flex;gap:8px}
+#bars i{flex:1;height:8px;border-radius:4px;background:#2A4A66;overflow:hidden;display:block}
+#bars i b{display:block;height:100%;width:0;background:#4FC3F7}
+#hd{position:absolute;left:60px;right:60px;top:352px;height:170px;display:flex;align-items:center;gap:26px}
+#num{background:#4FC3F7;color:#152F46;font-weight:900;font-size:76px;line-height:1;padding:16px 22px;border-radius:16px;letter-spacing:-.03em}
+#ttl{font-weight:900;font-size:66px;line-height:.98;letter-spacing:-.025em;text-transform:uppercase}
+#ttl .a{color:#4FC3F7;white-space:nowrap}
+#vp{position:absolute;left:60px;top:545px;width:960px;height:860px;border-radius:40px;overflow:hidden;background:#F5F5F5;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+#img{position:absolute;left:0;top:0;width:960px;height:960px;transform-origin:0 0;will-change:transform}
+#dim{position:absolute;inset:0;background:#152F46;opacity:0}
+#cards{position:absolute;left:50px;right:50px;top:90px;display:flex;flex-direction:column;gap:26px}
+.k{background:#1D3E5C;border-left:12px solid #4FC3F7;border-radius:20px;padding:40px 40px;font-weight:900;font-size:60px;letter-spacing:-.015em;line-height:1.05;opacity:0}
+.k small{display:block;font-weight:700;font-size:38px;color:#DCE6EF;margin-top:10px;letter-spacing:0}
+#fin{position:absolute;left:50px;right:50px;top:150px;text-align:left}
+#fin div{font-weight:900;font-size:92px;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;opacity:0;margin-bottom:26px}
+#cap{position:absolute;left:60px;right:60px;top:1432px;font-weight:800;font-size:46px;line-height:1.12;color:#fff}
+#cr{position:absolute;left:60px;right:60px;top:1548px;font-weight:700;font-size:22px;color:#9FB4C7}
+</style></head><body>
+<div id="top"><img src="../../brand/logo-horizontal-transparente.png"><span>THE WORLD AHEAD 2027</span></div>
+<div id="bars"></div>
+<div id="hd"><div id="num"></div><div id="ttl"></div></div>
+<div id="vp"><img id="img" src="circulo.jpg"><div id="dim"></div>
+ <div id="cards"><div class="k">1. Las tasas de interés<small>El costo del dinero sigue alto</small></div><div class="k">2. La dependencia de la IA<small>Motor del mercado y su mayor riesgo</small></div><div class="k">3. La geopolítica<small>Mueve petróleo, dólar y cripto</small></div></div>
+ <div id="fin"><div>No son predicciones.</div><div class="a" style="color:#4FC3F7">Son señales.</div><div style="font-size:70px;color:#fff">¿Cuál se cumple primero?</div></div>
+</div>
+<div id="cap"></div>
+<div id="cr">Ilustración: Cleon Peterson / The Economist · No es asesoría financiera</div>
+<script>
+const C=[70,395,1115,1440], K=960/1045, VW=960, VH=860;
+const S=[ // start, num, title, caption, box (coords portada)
+ [0,'', "La portada <span class='a'>2027</span> de The Economist", "10 señales de lo que viene", null],
+ [6.38,'01',"Empieza la era <span class='a'>post-Trump</span>","La sucesión arranca, pero no se irá en silencio",[385,400,835,790]],
+ [13.19,'02',"Irán: la guerra <span class='a'>sigue</span>","Pega en la energía y hasta en la comida",[700,1015,1100,1255]],
+ [18.92,'03',"El año <span class='a'>más caluroso</span>","Posible súper El Niño en camino",[85,810,345,1010]],
+ [22.38,'04',"IA: aceleración <span class='a'>y riesgo</span>","Mucha deuda y riesgo de un crash",[228,765,690,1012]],
+ [27.90,'05',"Francia <span class='a'>vota</span>","Marine Le Pen puede ganar",[662,768,1068,1032]],
+ [31.59,'06',"La deuda sale <span class='a'>más cara</span>","Bonos y tasas presionan a los gobiernos",[578,636,850,866]],
+ [35.28,'07',"China y <span class='a'>Taiwán</span>","Listo no es lo mismo que invadir",[395,1040,760,1200]],
+ [41.72,'08',"El efecto <span class='a'>Ozempic</span>","Cambia en qué gasta la gente",[405,850,768,1078]],
+ [45.23,'09',"El espacio ya es <span class='a'>negocio</span>","Starship y estaciones privadas",[150,490,470,800]],
+ [47.98,'10',"Hollywood busca <span class='a'>público</span>","Ahora compite contra youtubers",[215,1165,475,1295]],
+ [51.25,'?',"¿Y a ti qué? <span class='a'>Vigila 3 cosas</span>","",null],
+ [61.94,'',"","",null],
+]; const END=66.6;
+const bars=document.getElementById('bars'); for(let i=0;i<10;i++){bars.innerHTML+='<i><b></b></i>'}
+const ease=x=>x<0?0:x>1?1:x*x*(3-2*x), cl=(x,a,b)=>Math.max(a,Math.min(b,x));
+function cam(i){const b=S[i][4]; if(!b) return {s:VH/960*1.0, cx:480, cy:480};
+ const w=(b[2]-b[0])*K,h=(b[3]-b[1])*K; return {s:Math.min(VW/w,VH/h)*0.9, cx:((b[0]+b[2])/2-C[0])*K, cy:((b[1]+b[3])/2-C[1])*K}}
+const $=id=>document.getElementById(id); let last=-1;
+window.setT=function(t){
+ let i=0; for(let j=0;j<S.length;j++) if(t>=S[j][0]) i=j;
+ const t0=S[i][0], t1=i+1<S.length?S[i+1][0]:END, u=t-t0;
+ // cámara: transición 0.8s desde la anterior + deriva lenta
+ const a=cam(Math.max(i-1,0)), b=cam(i), e=i==0?1:ease(u/0.8);
+ // zoom-out intermedio para dar sensación de viaje
+ let s=a.s+(b.s-a.s)*e, cx=a.cx+(b.cx-a.cx)*e, cy=a.cy+(b.cy-a.cy)*e;
+ s*= 1-0.18*Math.sin(Math.PI*e)*(i>0&&S[i][4]&&S[i-1][4]?1:0);
+ s*= 1+0.05*cl(u/(t1-t0),0,1);
+ $('img').style.transform=`translate(${VW/2-s*cx}px,${VH/2-s*cy}px) scale(${s})`;
+ if(i!==last){ $('num').textContent=S[i][1]; $('num').style.display=S[i][1]?'block':'none'; $('ttl').innerHTML=S[i][2]; $('cap').textContent=S[i][3]; last=i; }
+ const ein=ease(u/0.35);
+ $('hd').style.opacity=i==12?0:ein; $('hd').style.transform=`translateY(${(1-ein)*24}px)`;
+ $('cap').style.opacity=ease((u-0.25)/0.35);
+ // barras
+ [...bars.children].forEach((el,k)=>{const n=k+1; let f=0; if(i>n) f=1; else if(i==n) f=cl(u/(t1-t0),0,1); el.firstChild.style.width=(f*100)+'%'});
+ bars.style.opacity=i==12?0:1;
+ // cierre
+ const d=i>=11?ease((t-51.25)/0.6):0; $('dim').style.opacity=d*0.93;
+ const ks=document.querySelectorAll('.k'), kt=[53.67,55.04,57.75];
+ ks.forEach((el,k)=>{const o=i==11?ease((t-kt[k])/0.35):0; const out=i==12?0:1; el.style.opacity=o*out; el.style.transform=`translateX(${(1-o)*-40}px)`});
+ const fs=document.querySelectorAll('#fin div'), ft=[61.94,63.26,64.42];
+ fs.forEach((el,k)=>{const o=ease((t-ft[k])/0.3); el.style.opacity=o; el.style.transform=`translateY(${(1-o)*30}px)`});
+}; setT(0);
+</script></body></html>
