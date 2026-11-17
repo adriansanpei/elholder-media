@@ -45,3 +45,4 @@ Regla: no repetir el mismo fondo en dos piezas seguidas. Si el tema no tiene fon
 - brand/mascotas/ (doggy, doggy-lentes, perrillo, chubby)
 
 Nota: fotos de personas reales o de terceros solo para la noticia original (con crédito); no reutilizar como fondo genérico.
+- noticias/2026-11-16-cftc-blockchain/src/foto.jpg  (IA/exchange de derivados, Runway) — categoría Stablecoins/exchanges / Macro
