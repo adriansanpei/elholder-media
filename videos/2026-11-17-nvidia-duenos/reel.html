@@ -1,0 +1,77 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#top{position:absolute;left:60px;width:900px;top:252px;display:flex;align-items:center;justify-content:space-between}
+#top img{width:170px}#top span{font-weight:800;font-size:24px;letter-spacing:.14em;color:#9FB4C7}
+#bar{position:absolute;left:60px;width:900px;top:330px;height:8px;border-radius:4px;background:#2A4A66;overflow:hidden}
+#bar b{display:block;height:100%;width:0;background:#4FC3F7}
+#hd{position:absolute;left:60px;width:900px;top:356px;height:160px;display:flex;align-items:center}
+#ttl{font-weight:900;font-size:64px;line-height:.98;letter-spacing:-.025em;text-transform:uppercase}
+#ttl a{color:#4FC3F7}
+#vp{position:absolute;left:60px;top:536px;width:900px;height:720px;border-radius:36px;overflow:hidden;background:#EFEFF1;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+#img{position:absolute;left:0;top:0;width:1217px;height:1292px;transform-origin:0 0;will-change:transform}
+#dim{position:absolute;inset:0;background:#152F46;opacity:0}
+#cards{position:absolute;left:40px;right:40px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.k{background:#1D3E5C;border-left:12px solid #4FC3F7;border-radius:20px;padding:32px 36px;font-weight:900;font-size:56px;letter-spacing:-.015em;line-height:1.04}
+.k small{display:block;font-weight:700;font-size:34px;color:#DCE6EF;margin-top:10px;letter-spacing:0;line-height:1.15}
+.k.r{border-left-color:#FF3B47}.k.r b{color:#FF6B74;font-weight:900}
+#fin{position:absolute;left:50px;right:50px;top:0;bottom:0;display:flex;align-items:center;font-weight:900;font-size:104px;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;opacity:0}
+#fin a{color:#4FC3F7}
+#cap{position:absolute;left:60px;width:900px;top:1282px;height:132px;display:flex;align-items:flex-start;font-weight:800;font-size:38px;line-height:1.14;color:#fff}
+#cr{position:absolute;left:60px;width:900px;top:1428px;font-weight:700;font-size:20px;color:#9FB4C7}
+</style></head><body>
+<div id="top"><img src="../../brand/logo-horizontal-transparente.png"><span>NVIDIA · $NVDA</span></div>
+<div id="bar"><b></b></div>
+<div id="hd"><div id="ttl"></div></div>
+<div id="vp"><img id="img" src="grafica.png"><div id="dim"></div><div id="cards"></div><div id="fin"><div>¿Tú crees que <a>regresa</a>?</div></div></div>
+<div id="cap"></div>
+<div id="cr">Fuentes: SEC, Fortune, AP · Gráfica: vía redes, cifras aproximadas · No es asesoría financiera</div>
+<script>
+const ST=[0, 2.42, 4.75, 8.62, 11.91, 13.66, 16.05, 21.17, 24.67, 27.02, 32.99, 38.7, 42.55, 44.11, 51.25, 53.45, 58.14, 61.36, 63.32, 66.07, 69.13, 73.04, 75.83], END=77.5;
+const SEN=["¿Quién es el verdadero dueño de Nvidia?","Spoiler: no es Jensen Huang.","Su fundador tiene apenas cerca del 3.5% de las acciones.","Y ojo: en Nvidia no hay acciones con súper voto.","Una acción, un voto.","Los dueños de verdad son los grandes fondos.","BlackRock, Vanguard, State Street y Fidelity suman más de una quinta parte de la empresa.","Y en total, las instituciones tienen cerca de dos tercios.","Por eso su salida pegó tan fuerte.","Jensen renunció el 12 de noviembre, en medio de un escándalo personal y una investigación de seguridad nacional.","Desde que estalló el caso, Nvidia ha perdido unos $450 billones en valor.","Y como no controla la empresa con sus acciones, no puede regresar solo.","Lo decide la junta.","Por eso fondos como Altimeter y Atreides le escribieron al consejo, y una carta abierta ya suma más de 170,000 firmas.","Hasta Elon Musk dijo que la firma.","Jensen ya respondió: sería un honor volver, pero solo si la junta lo aprueba.","Y la junta, por ahora, no lo está considerando.","¿Y esto qué significa para ti?","Uno: Nvidia pesa mucho en los índices.","Si tienes un fondo indexado, esto también te toca.","Dos: cuidado con las empresas que dependen de una sola persona.","Y tres: vigila lo que decida la junta.",""];
+const mid=(a,f)=>ST[a]+(ST[a+1]-ST[a])*f;
+// escena: [oración de inicio, título, caja de cámara (coords de la gráfica) o null, tarjetas [[t, clase, título, sub]]]
+const S=[
+ [0,"¿Quién es el <a>dueño</a> de Nvidia?",null,null],
+ [1,"Jensen Huang: solo <a>~3.4%</a>",[900,858,1195,1072],null],
+ [3,"1 acción = <a>1 voto</a>",[900,858,1195,1072],[[ST[3]+0.5,'',"Sin súper voto","Nvidia tiene una sola clase de acciones"],[ST[4],'',"1 acción = 1 voto","El fundador no controla con sus acciones"]]],
+ [5,"Los dueños: <a>los grandes fondos</a>",[690,350,1205,870],null],
+ [7,"Instituciones: <a>~2 de cada 3</a> acciones",[150,250,1000,1110],null],
+ [8,"Por eso su salida <a>pegó fuerte</a>",null,[[ST[9],'',"12 de noviembre","Jensen renuncia como CEO"],[mid(9,0.45),'',"Investigación","Escándalo personal y seguridad nacional"],[mid(10,0.35),'r',"<b>−$450 billones</b>","Valor de mercado perdido"]]],
+ [11,"No vuelve solo: <a>decide la junta</a>",null,[[ST[13],'',"Altimeter y Atreides","Le escribieron a la junta"],[mid(13,0.55),'',"+170,000 firmas","Carta abierta de apoyo"],[ST[14],'',"Elon Musk","Dijo que la firma"]]],
+ [15,"Jensen <a>ya respondió</a>",null,[[ST[15]+0.9,'',"“Sería un honor volver”","Solo si la junta lo aprueba"],[ST[16],'r',"La junta, por ahora","No lo está considerando"]]],
+ [17,"¿Y a ti qué? <a>3 cosas</a>",null,[[ST[18],'',"1. Pesa en los índices","Si tienes un fondo indexado, te toca"],[ST[20],'',"2. Riesgo de persona clave","Empresas que dependen de un líder"],[ST[21],'',"3. La decisión de la junta","Lo que sigue para la empresa"]]],
+ [22,"",null,null],
+];
+const VW=900,VH=720,IW=1217,IH=1292;
+const ease=x=>x<0?0:x>1?1:x*x*(3-2*x), cl=(x,a,b)=>Math.max(a,Math.min(b,x));
+function cam(i){const b=S[i][2]; if(!b) return {s:VH/IH, cx:IW/2, cy:IH/2};
+ const w=b[2]-b[0],h=b[3]-b[1]; return {s:Math.min(VW/w,VH/h)*0.94, cx:(b[0]+b[2])/2, cy:(b[1]+b[3])/2}}
+const $=id=>document.getElementById(id); let last=-1, lastS=-1;
+window.setT=function(t){
+ let i=0; for(let j=0;j<S.length;j++) if(t>=ST[S[j][0]]) i=j;
+ const t0=ST[S[i][0]], t1=i+1<S.length?ST[S[i+1][0]]:END, u=t-t0;
+ const a=cam(Math.max(i-1,0)), b=cam(i), e=i==0?1:ease(u/0.9);
+ let s=a.s+(b.s-a.s)*e, cx=a.cx+(b.cx-a.cx)*e, cy=a.cy+(b.cy-a.cy)*e;
+ s*=1+0.06*cl(u/(t1-t0),0,1);
+ $('img').style.transform=`translate(${VW/2-s*cx}px,${VH/2-s*cy}px) scale(${s})`;
+ if(i!==last){ $('ttl').innerHTML=S[i][1];
+  $('cards').innerHTML=(S[i][3]||[]).map(c=>`<div class="k ${c[1]}">${c[2]}<small>${c[3]}</small></div>`).join(''); last=i; }
+ const ein=ease(u/0.35); $('hd').style.opacity=ein; $('hd').style.transform=`translateY(${(1-ein)*24}px)`;
+ // tarjetas + oscurecer
+ const cs=S[i][3]; let d=0;
+ if(cs){ d=ease((t-(cs[0][0]-0.35))/0.4); if(i>0&&S[i-1][3]&&!S[i-1][2]&&!S[i][2]) d=1;
+  [...$('cards').children].forEach((el,k)=>{const o=ease((t-cs[k][0])/0.35); el.style.opacity=o; el.style.transform=`translateX(${(1-o)*-40}px)`}); }
+ const isFin=i==S.length-1; if(isFin) d=1;
+ $('dim').style.opacity=d*0.94;
+ const fo=isFin?ease(u/0.35):0; $('fin').style.opacity=fo; $('fin').style.transform=`translateY(${(1-fo)*30}px)`;
+ // subtítulo por oración
+ let si=0; for(let j=0;j<SEN.length;j++) if(t>=ST[j]) si=j;
+ if(si!==lastS){ $('cap').textContent=SEN[si]; lastS=si; }
+ $('cap').style.opacity=ease((t-ST[si])/0.2);
+ $('bar').firstChild.style.width=(cl(t/END,0,1)*100)+'%';
+}; if(ST.length) setT(0);
+</script></body></html>
