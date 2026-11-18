@@ -1,0 +1,107 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#0B1C2C;font-family:'IT';color:#fff}
+.s{position:absolute;inset:0;display:none}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.ov{position:absolute;inset:0}
+.tag{position:absolute;left:72px;top:64px;font-weight:800;font-size:22px;letter-spacing:.16em;color:#9FB4C7;text-transform:uppercase}
+h1{margin:0;font-weight:900;letter-spacing:-.03em;line-height:.97}
+h1 .a{color:#4FC3F7}
+p{margin:0;font-weight:700;font-size:38px;line-height:1.22;color:#DCE6EF}
+.mono{font-family:ui-monospace,'DejaVu Sans Mono',Menlo,monospace;font-weight:700}
+#pie{position:absolute;left:72px;right:72px;bottom:56px;height:56px;display:flex;align-items:center;justify-content:space-between}
+#pie .l{display:flex;align-items:center;gap:22px}
+#pie .l img.h{height:46px}#pie .l span{font-weight:700;font-size:30px;color:#9FB4C7}#pie .l img.d{height:40px}
+#pie .r{font-weight:700;font-size:21px;color:#9FB4C7}
+.cue{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#0B1C2C;font-weight:900;font-size:32px;padding:18px 30px;border-radius:999px}
+/* S1 */
+#s1 .bg{background-image:url('ojo.png');background-size:1620px 1620px;background-position:center -520px;background-repeat:no-repeat;filter:saturate(.9)}
+#s1 .ov{background:linear-gradient(180deg,rgba(8,20,32,.55) 0%,rgba(8,20,32,.35) 35%,rgba(8,20,32,.92) 62%,#081420 100%)}
+#card1{position:absolute;left:72px;right:72px;top:150px;background:rgba(10,24,38,.82);border:2px solid rgba(255,255,255,.18);border-radius:28px;padding:30px 36px;backdrop-filter:blur(6px)}
+#card1 small{display:block;font-weight:800;font-size:22px;letter-spacing:.14em;color:#9FB4C7;text-transform:uppercase;margin-bottom:14px}
+#card1 .mono{font-size:41px;line-height:1.25;word-break:break-all;color:#fff;letter-spacing:.01em}
+#card1 .mono b{color:#FF5A63;background:rgba(255,59,71,.18);border-radius:6px;padding:0 4px}
+#t1{position:absolute;left:72px;right:72px;top:770px}
+#t1 h1{font-size:104px}
+#t1 .cue{margin-top:44px}
+/* S2 */
+#s2{background:#0B1C2C}
+#t2{position:absolute;left:72px;right:72px;top:170px}
+#t2 h1{font-size:104px}
+#t2 p{margin-top:40px;max-width:920px;font-size:44px}
+.addr{margin-top:70px;display:flex;flex-direction:column;gap:22px}
+.row{display:flex;align-items:center;gap:22px;background:#12293F;border-radius:24px;padding:34px 34px}
+.row .mono{font-size:38px;letter-spacing:.01em}
+.row .ok{color:#7EE2A8;font-weight:900;font-size:34px;width:190px}
+.row .bad{color:#FF5A63;font-weight:900;font-size:34px;width:190px}
+.row .mono i{font-style:normal;color:#FF5A63;background:rgba(255,59,71,.2);border-radius:6px;padding:0 3px}
+#t2 .note{margin-top:70px;font-size:52px;color:#fff;font-weight:900;line-height:1.1}
+/* S3 */
+#s3{background:radial-gradient(1200px 900px at 85% 75%,#17406A 0%,#0B1C2C 60%)}
+#ph{position:absolute;right:-90px;bottom:120px;width:580px;height:900px;background:url('phone.png') no-repeat;background-size:1632px 918px;background-position:-875px -30px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 100%),linear-gradient(0deg,transparent 0,#000 14%);-webkit-mask-composite:source-in;mask-composite:intersect}
+#t3{position:absolute;left:72px;top:150px;width:560px}
+#t3 h1{font-size:78px}
+#id{display:inline-block;margin-top:34px;font-weight:900;font-size:54px;letter-spacing:-.01em;background:#fff;color:#0B1C2C;border-radius:18px;padding:16px 24px}
+#id span{color:#2E7FBF}
+ul{list-style:none;margin:44px 0 0;padding:0;display:flex;flex-direction:column;gap:26px}
+li{font-weight:800;font-size:36px;line-height:1.15;padding-left:48px;position:relative}
+li:before{content:'';position:absolute;left:0;top:10px;width:24px;height:24px;border-radius:50%;background:#4FC3F7}
+li small{display:block;font-weight:700;font-size:28px;color:#B9CADA;margin-top:6px}
+/* S4 */
+#s4 .bg{background-image:url('persona.png');background-size:2400px 1350px;background-position:-1130px 0;background-repeat:no-repeat}
+#s4 .ov{background:linear-gradient(180deg,rgba(8,20,32,.15) 0%,rgba(8,20,32,.05) 30%,rgba(8,20,32,.85) 58%,#081420 76%)}
+#t4{position:absolute;left:72px;right:72px;top:790px}
+#t4 h1{font-size:86px}
+#t4 p{margin-top:24px;font-size:36px}
+#t4 .cue{margin-top:36px;background:#4FC3F7;font-size:34px}
+
+#alert{position:absolute;left:72px;right:72px;top:150px;background:rgba(10,24,38,.88);border:2px solid rgba(255,90,99,.55);border-radius:28px;padding:30px 36px;display:flex;gap:26px;align-items:center}
+#alert .ic{flex:none;width:84px;height:84px;border-radius:50%;background:#FF3B47;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:56px}
+#alert b{display:block;font-weight:900;font-size:42px;letter-spacing:-.01em}
+#alert span{display:block;font-weight:700;font-size:30px;color:#DCE6EF;margin-top:6px}
+#t1 h1{font-size:98px}
+.cmp{margin-top:60px;display:flex;flex-direction:column;gap:22px}
+.c{background:#12293F;border-radius:24px;padding:32px 34px;border-left:12px solid #FF3B47}
+.c b{display:block;font-weight:900;font-size:44px;letter-spacing:-.01em}
+.c span{display:block;font-weight:700;font-size:34px;color:#DCE6EF;margin-top:8px;line-height:1.18}
+#t3 h1{font-size:74px}#t3 h1 .a{white-space:nowrap}
+#t3 .fine{margin-top:36px;font-size:27px;color:#9FB4C7;font-weight:700}
+</style></head><body>
+
+<div class="s" id="s1"><div class="bg"></div><div class="ov"></div>
+ <div id="alert"><div class="ic">!</div><div><b>Tu cuenta fue bloqueada</b><span>Retiros suspendidos hasta nuevo aviso</span></div></div>
+ <div id="t1"><h1>Si pueden bloquear tu cuenta, <span class="a">ese dinero no es tuyo.</span></h1><div class="cue">Desliza →</div></div>
+</div>
+
+<div class="s" id="s2">
+ <div id="t2"><h1>Lo que tienes es <span class="a">una promesa.</span></h1>
+ <p>La promesa de que te darán tu dinero cuando lo pidas.</p>
+ <div class="cmp">
+  <div class="c"><b>En el banco</b><span>Tu saldo es un número que el banco te debe.</span></div>
+  <div class="c"><b>En el exchange</b><span>Las llaves de tus monedas las tiene la empresa.</span></div>
+ </div>
+ <p class="note">Y quien tiene las llaves, decide.</p></div>
+</div>
+
+<div class="s" id="s3"><div id="ph"></div>
+ <div id="t3"><h1>Autocustodia: las llaves <span class="a">las tienes tú.</span></h1>
+ <ul>
+  <li>Nadie lo bloquea<small>Tu dinero no se mueve ni se congela sin ti</small></li>
+  <li>Una sola cuenta<small>Deposita, gasta con Visa e invierte en MXN, USD o cripto</small></li>
+  <li>defi ID<small>Un nombre fácil en vez de una dirección larga</small></li>
+ </ul>
+ <div class="fine">Eso es lo que prepara defi.com. Ojo: con las llaves, la responsabilidad también es tuya.</div></div>
+</div>
+
+<div class="s" id="s4"><div class="bg"></div><div class="ov"></div>
+ <div id="t4"><h1>Tu dinero, <span class="a">tus llaves, tu nombre.</span></h1>
+ <p>defi.com todavía no sale, pero la lista de espera ya está abierta. Sé de los primeros en usarla.</p>
+ <div class="cue">Únete a la lista de espera · link en mi perfil</div></div>
+</div>
+
+<div id="pie"><div class="l"><img class="h" src="../../../brand/logo-horizontal-transparente.png"><span>×</span><img class="d" src="defi-logo.png"></div><div class="r">Publicidad · defi.com</div></div>
+<script>const n=(location.hash||'#1').slice(1);document.getElementById('s'+n).style.display='block';</script>
+</body></html>
