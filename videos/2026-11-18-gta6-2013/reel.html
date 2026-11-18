@@ -34,63 +34,74 @@ body{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:'I
 .pt .nb{flex:none;width:76px;height:76px;border-radius:50%;background:#4FC3F7;color:#0E2238;font-weight:900;font-size:42px;display:flex;align-items:center;justify-content:center}
 .pt div{font-weight:800;font-size:44px;line-height:1.15}
 .pt div small{display:block;font-weight:700;font-size:32px;color:#DCE6EF;margin-top:6px}
-#cr{position:absolute;left:60px;width:900px;top:1430px;font-weight:700;font-size:20px;color:#9FB4C7}
+#crX{position:absolute;left:60px;width:900px;top:1430px;font-weight:700;font-size:20px;color:#9FB4C7}
+
+.chip{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:26px}
+.chip img{max-width:78%;max-height:78%}
+.logo{display:block;margin-bottom:34px}
+.row{display:flex;gap:24px;align-items:center;margin-top:22px}
+.row .chip{flex:none;width:112px;height:112px;border-radius:24px}
+.row .bd{flex:1}
+.chips{display:flex;gap:20px;margin-top:50px}
+.chips .chip{width:150px;height:150px}
+#s3 .h{font-size:84px;margin-bottom:10px}
 </style></head><body>
 <div id="grid"></div>
 <div id="top"><img src="../../brand/logo-horizontal-transparente.png"><span>GTA VI · 19 NOV</span></div>
 <div id="bar"><b></b></div>
 
 <div class="sc" id="s0">
+ <img class="logo" src="img/btc.png" style="width:260px">
  <div class="k">Septiembre 2013 · sale GTA V</div>
  <div class="h">1 Bitcoin costaba</div>
  <div class="big" id="btc0">$131</div>
 </div>
 <div class="sc" id="s1">
+ <img class="logo" src="img/gta6.png" style="width:420px">
  <div class="k">Mañana sale GTA VI</div>
- <div class="h">Hoy cuesta</div>
+ <div class="h">Y hoy 1 Bitcoin cuesta</div>
  <div class="big" style="color:#4FC3F7" id="btc1">$131</div>
- <div class="sub">13 años después.</div>
 </div>
 <div class="sc" id="s2">
- <div class="h">¿Qué habría pasado con <span class="p">$100</span> el día que salió GTA V?</div>
+ <div class="h">¿Qué habría pasado si hubieras invertido <span class="p">$100</span> el día que salió GTA V?</div>
+ <div class="chips">
+  <span class="chip"><img src="img/btc.png"></span><span class="chip"><img src="img/nvidia.png"></span><span class="chip"><img src="img/tesla.png"></span><span class="chip"><img src="img/apple.png"></span><span class="chip"><img src="img/t2.png"></span>
+ </div>
 </div>
 <div class="sc" id="s3">
- <div class="k">$100 invertidos el 17 sep 2013 → hoy</div>
+ <div class="h">Hoy tendrías…</div>
  <div id="rows"></div>
 </div>
 <div class="sc" id="s4">
+ <span class="chip logo" style="width:220px;height:220px"><img src="img/t2.png"></span>
  <div class="k">Ojo con el hype</div>
  <div class="h">Take-Two, la dueña de Rockstar</div>
  <div class="card r"><b>−2%</b><span>El día que salió GTA V</span></div>
  <div class="card r"><b>−10%</b><span>En dos días, esta semana</span></div>
 </div>
 <div class="sc" id="s5">
+ <img class="logo" src="img/gta6.png" style="width:360px">
  <div class="k">GTA VI llega en grande</div>
  <div class="card"><b>+$1,500 millones</b><span>En preventas</span></div>
  <div class="card"><b>Hasta $2,000 millones</b><span>Presupuesto estimado</span></div>
  <div class="card"><b>$80</b><span>Edición estándar</span></div>
 </div>
 <div class="sc" id="s6">
+ <img class="logo" src="img/gta6.png" style="width:300px">
  <div class="k">Dato curioso</div>
  <div class="h">GTA iba a llamarse <span class="p">“Race 'N' Chase”</span></div>
  <div class="sub">Un error hizo que las patrullas chocaran contra el jugador… y así nació el caos que la hizo famosa.</div>
 </div>
 <div class="sc" id="s7">
- <div class="h" style="font-size:80px">¿Y esto qué significa <span class="a">para ti?</span></div>
- <div class="pt"><span class="nb">1</span><div>13 años se pasan volando<small>El tiempo en el mercado pesa más que adivinar el momento</small></div></div>
- <div class="pt"><span class="nb">2</span><div>No todo sube<small>Por cada Nvidia, muchas se quedaron en el camino</small></div></div>
- <div class="pt"><span class="nb">3</span><div>El hype no es garantía<small>Ni siquiera para la acción del juego más esperado</small></div></div>
-</div>
-<div class="sc" id="s8">
+ <img class="logo" src="img/gta6.png" style="width:300px">
  <div class="h" style="font-size:120px">¿Tú qué habrías comprado en <span class="p">2013</span>?</div>
 </div>
 
-<div id="cr">Precios de cierre 17 sep 2013 y 17 nov 2026, ajustados por splits, sin dividendos · Fuentes: CoinGecko, 24/7 Wall St., Sensor Tower · No es asesoría financiera</div>
 <script>
-const SC=[0,4.2,8.6,12.0,23.0,28.0,34.0,39.5,47.5,51.5];
+const SC=[0,4.2,8.6,12.6,23.6,28.6,34.6,40.1,44.5];
 const END=SC[SC.length-1];
-const R=[["Bitcoin",47580,"$131 → $62,478"],["Nvidia",38865,"$0.40 → $155.46"],["Tesla",3431,"$11.08 → $380.11"],["Apple",2164,"$16.26 → $351.91"],["Take-Two",1200,"$17.00 → $203.93"]];
-document.getElementById('rows').innerHTML=R.map(r=>`<div class="row"><div class="lb"><span class="n">${r[0]}</span><span class="v">$0</span></div><div class="tr"><i></i></div><small>${r[2]}</small></div>`).join('');
+const R=[["Bitcoin",47580,"$131 → $62,478","btc"],["Nvidia",38865,"$0.40 → $155.46","nvidia"],["Tesla",3431,"$11.08 → $380.11","tesla"],["Apple",2164,"$16.26 → $351.91","apple"],["Take-Two",1200,"$17.00 → $203.93","t2"]];
+document.getElementById('rows').innerHTML=R.map(r=>`<div class="row"><span class="chip"><img src="img/${r[3]}.png"></span><div class="bd"><div class="lb"><span class="n">${r[0]}</span><span class="v">$0</span></div><div class="tr"><i></i></div><small>${r[2]}</small></div></div>`).join('');
 const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3), cl=(x,a,b)=>Math.max(a,Math.min(b,x));
 const fmt=n=>'$'+Math.round(n).toLocaleString('en-US');
 const $=id=>document.getElementById(id);
@@ -100,11 +111,11 @@ window.setT=function(t){
  const u=t-SC[i], dur=SC[i+1]-SC[i];
  document.querySelectorAll('.sc').forEach((s,k)=>s.style.display=k==i?'flex':'none');
  const s=$('s'+i);
- const out=cl((dur-u)/0.3,0,1); s.style.opacity=i==8?1:out;
+ const out=cl((dur-u)/0.3,0,1); s.style.opacity=i==7?1:out;
  [...s.children].forEach((c,k)=>{ if(i!=3) show(c,u,0.12+k*0.35) });
  if(i==1){$('btc1').textContent=fmt(131+(62478-131)*ease(cl((u-0.6)/2.2,0,1)))}
  if(i==3){ show(s.children[0],u,0.1);
-  [...$('rows').children].forEach((r,k)=>{const d=0.6+k*1.9; show(r,u,d); const p=ease(cl((u-d-0.2)/1.4,0,1));
+  [...$('rows').children].forEach((r,k)=>{const d=0.7+k*1.9; show(r,u,d); const p=ease(cl((u-d-0.2)/1.4,0,1));
    r.querySelector('.v').textContent=fmt(100+(R[k][1]-100)*p);
    r.querySelector('i').style.width=Math.max(3,R[k][1]/R[0][1]*100*p)+'%';});}
  $('bar').firstChild.style.width=(cl(t/END,0,1)*100)+'%';

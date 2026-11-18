@@ -1,6 +1,6 @@
 # Melodía synthwave original (estilo Vice City) generada con numpy
 import numpy as np, wave
-SR=44100; BPM=100; beat=60/BPM; DUR=51.5
+SR=44100; BPM=100; beat=60/BPM; DUR=44.5
 N=int(SR*DUR); t=np.arange(N)/SR
 out=np.zeros(N)
 def note(f): return 440*2**((f-69)/12)

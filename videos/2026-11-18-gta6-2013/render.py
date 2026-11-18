@@ -1,7 +1,7 @@
 import subprocess, os
 from playwright.sync_api import sync_playwright
-H=os.path.abspath('reel.html'); FPS=30; END=51.5
-SC=[0,4.2,8.6,12.0,23.0,28.0,34.0,39.5,47.5,51.5]
+H=os.path.abspath('reel.html'); FPS=30; END=44.5
+SC=[0,4.2,8.6,12.6,23.6,28.6,34.6,40.1,44.5]
 os.makedirs('scenes',exist_ok=True)
 with sync_playwright() as p:
     b=p.chromium.launch(); pg=b.new_page(viewport={'width':1080,'height':1920})
