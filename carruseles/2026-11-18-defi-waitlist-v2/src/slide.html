@@ -51,12 +51,12 @@ li{font-weight:800;font-size:36px;line-height:1.15;padding-left:48px;position:re
 li:before{content:'';position:absolute;left:0;top:10px;width:24px;height:24px;border-radius:50%;background:#4FC3F7}
 li small{display:block;font-weight:700;font-size:28px;color:#B9CADA;margin-top:6px}
 /* S4 */
-#s4 .bg{background-image:url('persona.png');background-size:2400px 1350px;background-position:-1130px 0;background-repeat:no-repeat}
-#s4 .ov{background:linear-gradient(180deg,rgba(8,20,32,.15) 0%,rgba(8,20,32,.05) 30%,rgba(8,20,32,.85) 58%,#081420 76%)}
-#t4{position:absolute;left:72px;right:72px;top:790px}
-#t4 h1{font-size:86px}
-#t4 p{margin-top:24px;font-size:36px}
-#t4 .cue{margin-top:36px;background:#4FC3F7;font-size:34px}
+#s5 .bg{background-image:url('persona.png');background-size:2400px 1350px;background-position:-1130px 0;background-repeat:no-repeat}
+#s5 .ov{background:linear-gradient(180deg,rgba(8,20,32,.15) 0%,rgba(8,20,32,.05) 30%,rgba(8,20,32,.85) 58%,#081420 76%)}
+#t5{position:absolute;left:72px;right:72px;top:790px}
+#t5 h1{font-size:86px}
+#t5 p{margin-top:24px;font-size:36px}
+#t5 .cue{margin-top:36px;background:#4FC3F7;font-size:34px}
 
 #alert{position:absolute;left:72px;right:72px;top:150px;background:rgba(10,24,38,.88);border:2px solid rgba(255,90,99,.55);border-radius:28px;padding:30px 36px;display:flex;gap:26px;align-items:center}
 #alert .ic{flex:none;width:84px;height:84px;border-radius:50%;background:#FF3B47;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:56px}
@@ -69,8 +69,21 @@ li small{display:block;font-weight:700;font-size:28px;color:#B9CADA;margin-top:6
 .c span{display:block;font-weight:700;font-size:34px;color:#DCE6EF;margin-top:8px;line-height:1.18}
 #t3 h1{font-size:74px}#t3 h1 .a{white-space:nowrap}
 #t3 .fine{margin-top:36px;font-size:27px;color:#9FB4C7;font-weight:700}
-</style></head><body>
 
+#s4{background:radial-gradient(1200px 900px at 85% 75%,#17406A 0%,#0B1C2C 60%)}
+#s3{background:#0B1C2C}
+#t3b{position:absolute;left:72px;right:72px;top:170px}
+#t3b .k{font-weight:900;font-size:30px;letter-spacing:.16em;text-transform:uppercase;color:#0B1C2C;background:#4FC3F7;display:inline-block;padding:10px 20px;border-radius:12px;margin-bottom:30px}
+#t3b h1{font-size:100px}
+#t3b ul{margin-top:64px;gap:22px}
+#t3b li{background:#12293F;border-radius:24px;padding:32px 34px 32px 96px;font-size:46px;font-weight:900}
+#t3b li:before{left:38px;top:44px;width:30px;height:30px}
+#t3b li small{font-size:34px;color:#DCE6EF;margin-top:8px;line-height:1.18}
+#t3b .fine{margin-top:40px;font-size:30px;color:#9FB4C7;font-weight:700;line-height:1.25}
+#t3 h1{font-size:76px}
+.was{margin-top:36px;font-family:ui-monospace,'DejaVu Sans Mono',monospace;font-weight:700;font-size:30px;color:#8FA3B5;text-decoration:line-through;text-decoration-color:#FF5A63;text-decoration-thickness:4px}
+#id{margin-top:18px}
+</style></head><body>
 <div class="s" id="s1"><div class="bg"></div><div class="ov"></div>
  <div id="alert"><div class="ic">!</div><div><b>Tu cuenta fue bloqueada</b><span>Retiros suspendidos hasta nuevo aviso</span></div></div>
  <div id="t1"><h1>Si pueden bloquear tu cuenta, <span class="a">ese dinero no es tuyo.</span></h1><div class="cue">Desliza →</div></div>
@@ -83,25 +96,35 @@ li small{display:block;font-weight:700;font-size:28px;color:#B9CADA;margin-top:6
   <div class="c"><b>En el banco</b><span>Tu saldo es un número que el banco te debe.</span></div>
   <div class="c"><b>En el exchange</b><span>Las llaves de tus monedas las tiene la empresa.</span></div>
  </div>
- <p class="note">Y quien tiene las llaves, decide.</p></div>
+ <p class="note">Y quien tiene las llaves, tiene el control.</p></div>
 </div>
 
-<div class="s" id="s3"><div id="ph"></div>
- <div id="t3"><h1>Autocustodia: las llaves <span class="a">las tienes tú.</span></h1>
+<div class="s" id="s3">
+ <div id="t3b"><div class="k">Solución</div><h1>Autocustodia: las llaves <span class="a">las tienes tú.</span></h1>
  <ul>
-  <li>Nadie lo bloquea<small>Tu dinero no se mueve ni se congela sin ti</small></li>
-  <li>Una sola cuenta<small>Deposita, gasta con Visa e invierte en MXN, USD o cripto</small></li>
-  <li>defi ID<small>Un nombre fácil en vez de una dirección larga</small></li>
+  <li>Nadie lo bloquea<small>Tu dinero no se mueve ni se congela sin ti.</small></li>
+  <li>Una sola cuenta<small>Deposita, gasta con Visa e invierte en MXN, USD o cripto.</small></li>
  </ul>
  <div class="fine">Eso es lo que prepara defi.com. Ojo: con las llaves, la responsabilidad también es tuya.</div></div>
 </div>
 
-<div class="s" id="s4"><div class="bg"></div><div class="ov"></div>
- <div id="t4"><h1>Tu dinero, <span class="a">tus llaves, tu nombre.</span></h1>
+<div class="s" id="s4"><div id="ph"></div>
+ <div id="t3"><h1>defi ID: tu wallet <span class="a">con nombre.</span></h1>
+ <div class="was">0x71C7656EC7ab88b0...8976F</div>
+ <div id="id">adrian<span>.defi.com</span></div>
+ <ul>
+  <li>Fácil de compartir<small>Un nombre que se lee, en vez de 42 caracteres</small></li>
+  <li>Una sola identidad<small>El mismo nombre para tus distintas cuentas</small></li>
+  <li>Único y tuyo<small>Tú eliges tu nombre al registrarte</small></li>
+ </ul></div>
+</div>
+
+<div class="s" id="s5"><div class="bg"></div><div class="ov"></div>
+ <div id="t5"><h1>Tu dinero, <span class="a">tus llaves, tu nombre.</span></h1>
  <p>defi.com todavía no sale, pero la lista de espera ya está abierta. Sé de los primeros en usarla.</p>
  <div class="cue">Únete a la lista de espera · link en mi perfil</div></div>
 </div>
 
-<div id="pie"><div class="l"><img class="h" src="../../../brand/logo-horizontal-transparente.png"><span>×</span><img class="d" src="defi-logo.png"></div><div class="r">Publicidad · defi.com</div></div>
+<div id="pie"><div class="l"><img class="h" src="../../../brand/logo-horizontal-transparente.png"><span>×</span><img class="d" src="defi-logo.png"></div></div>
 <script>const n=(location.hash||'#1').slice(1);document.getElementById('s'+n).style.display='block';</script>
 </body></html>
