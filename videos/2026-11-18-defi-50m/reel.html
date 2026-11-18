@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:'IT';color:#fff;
+ background:radial-gradient(1000px 800px at 85% 20%,rgba(79,195,247,.16),transparent 60%),#0E2238}
+#top{position:absolute;left:60px;width:900px;top:252px;display:flex;align-items:center;gap:20px}
+#top img.h{width:170px}#top span{font-weight:700;font-size:30px;color:#9FB4C7}#top img.d{height:38px}
+#bar{position:absolute;left:60px;width:900px;top:330px;height:8px;border-radius:4px;background:#2A4A66;overflow:hidden}
+#bar b{display:block;height:100%;width:0;background:#4FC3F7}
+.sc{position:absolute;left:60px;width:900px;top:370px;height:890px;display:none;flex-direction:column;justify-content:center}
+.k{font-weight:800;font-size:30px;letter-spacing:.16em;text-transform:uppercase;color:#4FC3F7;margin-bottom:20px}
+.h{font-weight:900;font-size:88px;line-height:.98;letter-spacing:-.03em}
+.h .a{color:#4FC3F7}.h .r{color:#FF5A63}
+.big{font-weight:900;font-size:150px;letter-spacing:-.04em;line-height:1}
+.sub{font-weight:700;font-size:42px;line-height:1.2;color:#DCE6EF;margin-top:24px}
+.mono{font-family:ui-monospace,'DejaVu Sans Mono',monospace;font-weight:700}
+.card{background:rgba(18,41,63,.92);border:2px solid rgba(79,195,247,.25);border-radius:28px;padding:30px 34px;margin-top:22px}
+.card b{display:block;font-weight:900;font-size:68px;letter-spacing:-.02em;line-height:1}
+.card span{display:block;font-weight:700;font-size:34px;color:#DCE6EF;margin-top:8px}
+.card.r{border-color:rgba(255,90,99,.5)}.card.r b{color:#FF6B74}
+.tx{display:flex;align-items:center;justify-content:space-between;background:rgba(18,41,63,.92);border-radius:28px;padding:34px;margin-top:26px;border-left:12px solid #7EE2A8}
+.tx.r{border-left-color:#FF3B47}
+.tx .am{font-weight:900;font-size:64px;letter-spacing:-.02em}
+.tx .st{font-weight:900;font-size:36px;color:#7EE2A8}.tx.r .st{color:#FF6B74}
+.ad{background:rgba(18,41,63,.92);border-radius:24px;padding:26px 30px;margin-top:20px}
+.ad small{display:block;font-weight:800;font-size:26px;letter-spacing:.12em;text-transform:uppercase;color:#7EE2A8;margin-bottom:8px}
+.ad.r small{color:#FF6B74}
+.ad .mono{font-size:50px;letter-spacing:.02em}
+.ad .mono u{text-decoration:none;color:#4FC3F7}.ad .mono i{font-style:normal;color:#8FA3B5}
+.full{font-size:54px;line-height:1.3;word-break:break-all;color:#DCE6EF;margin-top:30px}
+.was{font-size:40px;color:#8FA3B5;text-decoration:line-through;text-decoration-color:#FF5A63;text-decoration-thickness:5px;margin-top:34px}
+.pill{display:inline-block;align-self:flex-start;margin-top:22px;font-weight:900;font-size:66px;background:#fff;color:#0B1C2C;border-radius:22px;padding:20px 30px;letter-spacing:-.01em}
+.pill span{color:#2E7FBF}
+.cta{display:inline-block;align-self:flex-start;margin-top:40px;font-weight:900;font-size:44px;background:#4FC3F7;color:#0B1C2C;border-radius:999px;padding:24px 40px}
+.dl{height:70px;align-self:flex-start;margin-bottom:36px}
+#cap{position:absolute;left:60px;width:900px;top:1284px;height:150px;font-weight:800;font-size:38px;line-height:1.16;color:#fff}
+</style></head><body>
+<div id="top"><img class="h" src="../../brand/logo-horizontal-transparente.png"><span>×</span><img class="d" src="defi-logo.png"></div>
+<div id="bar"><b></b></div>
+
+<div class="sc" data-s="0">
+ <div class="h" data-s="0">Envió una <span class="a">prueba</span> a una dirección</div>
+ <div class="tx" data-s="0" data-f=".45"><span class="am">50 USDT</span><span class="st" data-s="1">✓ Llegaron bien</span></div>
+</div>
+<div class="sc" data-s="2">
+ <div class="k" data-s="2">Después envió</div>
+ <div class="big" id="cnt" data-s="2">$0</div>
+ <div class="sub" data-s="2" data-f=".5">49,999,950 USDT</div>
+ <div class="h r" data-s="3" style="margin-top:40px;color:#FF5A63">Los perdió todos.</div>
+</div>
+<div class="sc" data-s="4">
+ <div class="h" data-s="4">Nadie entró a su wallet.</div>
+ <div class="h" data-s="5" style="margin-top:26px">Nadie lo <span class="a">hackeó.</span></div>
+ <div class="card r" data-s="6"><b style="font-size:56px">Copió la dirección equivocada</b><span>De su propio historial</span></div>
+</div>
+<div class="sc" data-s="7">
+ <div class="k" data-s="7">20 de diciembre de 2025</div>
+ <div class="ad" data-s="8"><small>Dirección real</small><div class="mono"><u>0x7a3</u><i>…</i><u>9c2e</u></div></div>
+ <div class="ad r" data-s="8" data-f=".12"><small>Dirección falsa</small><div class="mono"><u>0x7a3</u><i>…</i><u>9c2e</u></div></div>
+ <div class="sub" data-s="8" data-f=".3">Mismos 5 caracteres al inicio. Mismos 4 al final.</div>
+ <div class="h" data-s="9" style="font-size:66px;margin-top:34px">Lo de en medio se esconde con <span class="a">“…”</span></div>
+</div>
+<div class="sc" data-s="10">
+ <div class="k" data-s="10">No es un caso aislado</div>
+ <div class="h" data-s="11" style="font-size:64px">Un estudio midió 2 años de este ataque</div>
+ <div class="card" data-s="11" data-f=".24"><b>270 millones</b><span>De intentos</span></div>
+ <div class="card" data-s="11" data-f=".47"><b>17 millones</b><span>De víctimas apuntadas</span></div>
+ <div class="card r" data-s="11" data-f=".70"><b>$83.8 millones</b><span>Perdidos</span></div>
+</div>
+<div class="sc" data-s="12">
+ <div class="k" data-s="12">El problema es de diseño</div>
+ <div class="h" data-s="12" data-f=".3">Le mandas dinero a <span class="r">42 caracteres</span> que nadie puede leer</div>
+ <div class="mono full" data-s="12" data-f=".45">0x7a3f1c84D2b96E05aF37c1B8e4d60A2f5B379c2e</div>
+</div>
+<div class="sc" data-s="13">
+ <img class="dl" src="defi-logo.png" data-s="13">
+ <div class="h" data-s="13">defi ID: mándale dinero <span class="a">a un nombre</span></div>
+ <div class="mono was" data-s="13" data-f=".42">0x7a3f…9c2e</div>
+ <div class="pill" data-s="13" data-f=".7">tunombre<span>.defi.com</span></div>
+</div>
+<div class="sc" data-s="14">
+ <div class="h" data-s="14" style="font-size:76px">Un nombre no elimina todos los fraudes…</div>
+ <div class="h" data-s="14" data-f=".34" style="font-size:76px;margin-top:30px">pero sí <span class="a">el más caro:</span></div>
+ <div class="card" data-s="14" data-f=".58"><b style="font-size:52px">Confundir dos direcciones que se ven iguales</b></div>
+</div>
+<div class="sc" data-s="15">
+ <img class="dl" src="defi-logo.png" data-s="15">
+ <div class="h" data-s="15">Aparta tu defi ID <span class="a">antes de que alguien más se quede con tu nombre</span></div>
+ <div class="cta" data-s="15" data-f=".56">Lista de espera · link en mi perfil</div>
+</div>
+
+<div id="cap"></div>
+<script>
+const ST=[0, 3.37, 4.5, 7.24, 8.87, 10.22, 11.45, 14.29, 17.14, 23.13, 27.15, 28.65, 39.81, 46.07, 52.01, 58.58], END=65.6;
+const SEN=["Alguien envió 50 dólares de prueba a una dirección.","Llegaron bien.","Después envió casi 50 millones.","Y los perdió todos.","Nadie entró a su wallet.","Nadie lo hackeó.","Solo copió la dirección equivocada de su historial.","Pasó el 20 de diciembre de 2025.","La dirección falsa tenía los mismos 5 caracteres al inicio, y los mismos 4 al final, que la real.","Y lo de en medio es justo lo que las wallets esconden con tres puntitos.","Y no es un caso aislado.","Un estudio midió dos años de este ataque: 270 millones de intentos, 17 millones de víctimas apuntadas y casi 84 millones de dólares perdidos.","El problema es de diseño: en cripto le mandas dinero a 42 caracteres que nadie puede leer.","Eso es lo que quiere cambiar el defi ID: en vez de una dirección larga, le mandas dinero a un nombre.","Un nombre no elimina todos los fraudes, pero sí el más caro: confundir dos direcciones que se ven iguales.","Si quieres apartar tu defi ID antes de que alguien más se quede con tu nombre, la lista de espera está en el link de mi perfil."];
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3), cl=(x,a,b)=>Math.max(a,Math.min(b,x));
+const scs=[...document.querySelectorAll('.sc')], S0=scs.map(s=>+s.dataset.s);
+const tOf=el=>{const s=+el.dataset.s, f=+(el.dataset.f||0); return ST[s]+((ST[s+1]??END)-ST[s])*f};
+const els=scs.map(s=>[...s.querySelectorAll('[data-s]')].map(e=>[e,0]));
+let lastS=-1;
+window.SCENES=()=>S0.map(s=>ST[s]).concat([END]);
+window.setT=function(t){
+ if(els[0][0][1]===0) els.forEach(a=>a.forEach(p=>p[1]=tOf(p[0])));
+ let i=0; S0.forEach((s,j)=>{if(t>=ST[s]) i=j});
+ const t1=i+1<S0.length?ST[S0[i+1]]:END;
+ scs.forEach((s,k)=>s.style.display=k==i?'flex':'none');
+ scs[i].style.opacity=i==scs.length-1?1:cl((t1-t)/0.25,0,1);
+ els[i].forEach(([e,te])=>{const o=ease((t-te)/0.4); e.style.opacity=o; e.style.transform=`translateY(${(1-o)*36}px)`});
+ if(i==1){const p=ease(cl((t-ST[2]-0.2)/1.6,0,1)); document.getElementById('cnt').textContent='$'+Math.round(49999950*p).toLocaleString('en-US'); document.getElementById('cnt').style.fontSize='124px'}
+ let si=0; for(let j=0;j<SEN.length;j++) if(t>=ST[j]) si=j;
+ const cap=document.getElementById('cap'); if(si!==lastS){cap.textContent=SEN[si]; lastS=si}
+ cap.style.opacity=ease((t-ST[si])/0.2);
+ document.querySelector('#bar b').style.width=(cl(t/END,0,1)*100)+'%';
+};
+</script></body></html>
