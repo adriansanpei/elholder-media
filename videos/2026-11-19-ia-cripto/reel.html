@@ -1,0 +1,132 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:'IT';color:#fff;
+ background:radial-gradient(1000px 800px at 85% 20%,rgba(79,195,247,.16),transparent 60%),#0E2238}
+#top{position:absolute;left:60px;width:900px;top:252px;display:flex;align-items:center;gap:20px}
+#top img.h{width:170px}#top span{font-weight:700;font-size:30px;color:#9FB4C7}#top img.d{height:38px}
+#bar{position:absolute;left:60px;width:900px;top:330px;height:8px;border-radius:4px;background:#2A4A66;overflow:hidden}
+#bar b{display:block;height:100%;width:0;background:#4FC3F7}
+.sc{position:absolute;left:60px;width:900px;top:370px;height:890px;display:none;flex-direction:column;justify-content:center}
+.k{font-weight:800;font-size:30px;letter-spacing:.16em;text-transform:uppercase;color:#4FC3F7;margin-bottom:20px}
+.h{font-weight:900;font-size:88px;line-height:.98;letter-spacing:-.03em}
+.h .a{color:#4FC3F7}.h .r{color:#FF5A63}
+.big{font-weight:900;font-size:150px;letter-spacing:-.04em;line-height:1}
+.sub{font-weight:700;font-size:42px;line-height:1.2;color:#DCE6EF;margin-top:24px}
+.mono{font-family:ui-monospace,'DejaVu Sans Mono',monospace;font-weight:700}
+.card{background:rgba(18,41,63,.92);border:2px solid rgba(79,195,247,.25);border-radius:28px;padding:30px 34px;margin-top:22px}
+.card b{display:block;font-weight:900;font-size:68px;letter-spacing:-.02em;line-height:1}
+.card span{display:block;font-weight:700;font-size:34px;color:#DCE6EF;margin-top:8px}
+.card.r{border-color:rgba(255,90,99,.5)}.card.r b{color:#FF6B74}
+.tx{display:flex;align-items:center;justify-content:space-between;background:rgba(18,41,63,.92);border-radius:28px;padding:34px;margin-top:26px;border-left:12px solid #7EE2A8}
+.tx.r{border-left-color:#FF3B47}
+.tx .am{font-weight:900;font-size:64px;letter-spacing:-.02em}
+.tx .st{font-weight:900;font-size:36px;color:#7EE2A8}.tx.r .st{color:#FF6B74}
+.ad{background:rgba(18,41,63,.92);border-radius:24px;padding:26px 30px;margin-top:20px}
+.ad small{display:block;font-weight:800;font-size:26px;letter-spacing:.12em;text-transform:uppercase;color:#7EE2A8;margin-bottom:8px}
+.ad.r small{color:#FF6B74}
+.ad .mono{font-size:50px;letter-spacing:.02em}
+.ad .mono u{text-decoration:none;color:#4FC3F7}.ad .mono i{font-style:normal;color:#8FA3B5}
+.full{font-size:54px;line-height:1.3;word-break:break-all;color:#DCE6EF;margin-top:30px}
+.was{font-size:40px;color:#8FA3B5;text-decoration:line-through;text-decoration-color:#FF5A63;text-decoration-thickness:5px;margin-top:34px}
+.pill{display:inline-block;align-self:flex-start;margin-top:22px;font-weight:900;font-size:66px;background:#fff;color:#0B1C2C;border-radius:22px;padding:20px 30px;letter-spacing:-.01em}
+.pill span{color:#2E7FBF}
+.cta{display:inline-block;align-self:flex-start;margin-top:40px;font-weight:900;font-size:44px;background:#4FC3F7;color:#0B1C2C;border-radius:999px;padding:24px 40px}
+.dl{height:70px;align-self:flex-start;margin-bottom:36px}
+#cap{position:absolute;left:60px;width:900px;top:1284px;height:150px;font-weight:800;font-size:38px;line-height:1.16;color:#fff}
+
+.fr{position:relative;height:540px;margin-top:26px}
+.fr img{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;max-width:100%;max-height:100%;border-radius:26px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.h.m{font-size:70px}
+.tag{align-self:flex-start;background:#FF3B47;color:#fff;font-weight:900;font-size:30px;letter-spacing:.14em;padding:10px 20px;border-radius:12px;margin-bottom:26px}
+.q{background:rgba(18,41,63,.92);border-radius:28px;padding:32px 34px;margin-top:24px;border-left:12px solid #4FC3F7}
+.q small{display:block;font-weight:800;font-size:28px;letter-spacing:.14em;color:#4FC3F7;margin-bottom:10px}
+.q div{font-weight:800;font-size:46px;line-height:1.12}
+.vs{display:flex;gap:20px;margin-top:22px}
+.vs .card{flex:1;margin-top:0;padding:26px}
+.vs .card b{font-size:58px}.vs .card span{font-size:30px}
+.nums{display:flex;gap:16px;margin-top:22px}
+.nums .card{flex:1;margin-top:0;padding:22px 20px;text-align:center}
+.nums .card b{font-size:54px}.nums .card span{font-size:28px}
+</style></head><body>
+<div id="top"><img class="h" src="../../brand/logo-horizontal-transparente.png"></div>
+<div id="bar"><b></b></div>
+
+<div class="sc" data-s="0">
+ <div class="tag" data-s="0">ALERTA</div>
+ <div class="h" data-s="0" style="font-size:112px">Si estás en IA, es hora de <span class="a">regresar a cripto</span></div>
+</div>
+<div class="sc" data-s="1">
+ <div class="h m" data-s="1">La IA se tragó la liquidez <span class="a">que antes iba a cripto</span></div>
+ <div class="fr"><img src="img/i02.png" data-s="2" data-o="3"><img src="img/i03.png" data-s="3"></div>
+</div>
+<div class="sc" data-s="4">
+ <div class="h m" data-s="4">La señal del <span class="a">taxista</span></div>
+ <div class="q" data-s="4" data-f=".2"><small>2021</small><div>“Te recomiendo Cardano y XRP”</div></div>
+ <div class="q" data-s="5" style="border-left-color:#FF3B47"><small style="color:#FF6B74">AYER</small><div>“Mira las maravillas que hago con ChatGPT”</div></div>
+</div>
+<div class="sc" data-s="6">
+ <div class="h m" data-s="6" style="color:#9FB4C7">No es como la burbuja del internet.</div>
+ <div class="h" data-s="7" style="font-size:120px;margin-top:26px">Es <span class="r">inmobiliaria.</span></div>
+ <div class="h m" data-s="8" style="margin-top:26px">Igualito al <span class="a">2008</span></div>
+ <div class="fr" style="height:330px"><img src="img/i05.png" data-s="8" data-f=".2"></div>
+</div>
+<div class="sc" data-s="9">
+ <div class="h m" data-s="9">Un data center es un <span class="a">proyecto inmobiliario</span></div>
+ <div class="fr" style="height:430px"><img src="img/i08.png" data-s="9" data-f=".15"></div>
+ <div class="vs"><div class="card" data-s="10"><b>+20 años</b><span>La deuda con que se construyen</span></div><div class="card r" data-s="10" data-f=".55"><b>4 años</b><span>Lo que tardan los chips en quedar obsoletos</span></div></div>
+</div>
+<div class="sc" data-s="11">
+ <div class="h m" data-s="11">La deuda de las <span class="a">big tech</span></div>
+ <div class="fr" style="height:470px"><img src="img/i09.png" data-s="11" data-f=".1"></div>
+ <div class="nums"><div class="card" data-s="11" data-f=".5"><b>$17B</b><span>2024</span></div><div class="card" data-s="12"><b>$250B</b><span>Este año</span></div><div class="card r" data-s="13"><b>$420B</b><span>El próximo</span></div></div>
+</div>
+<div class="sc" data-s="14">
+ <div class="h m" data-s="14">Van a sobrar tantos data centers que serán <span class="a">canchas de pádel</span></div>
+ <div class="fr"><img src="img/i10.png" data-s="14" data-f=".25"></div>
+</div>
+<div class="sc" data-s="15">
+ <div class="tag" data-s="15">Las señales ya están aquí</div>
+ <div class="h m" data-s="15" data-f=".35">Los bonos que financian data centers <span class="r">ya están cayendo</span></div>
+ <div class="fr" style="height:500px"><img src="img/i12.png" data-s="15" data-f=".4"></div>
+</div>
+<div class="sc" data-s="16">
+ <div class="h m" data-s="16">En 2008, el gobierno respondió <span class="a">imprimiendo dinero</span></div>
+ <div class="fr" style="height:440px"><img src="img/i13.png" data-s="16" data-f=".3"></div>
+ <div class="card r" data-s="17"><b style="font-size:56px">Y pagó el de siempre</b></div>
+</div>
+<div class="sc" data-s="18">
+ <div class="h m" data-s="18" style="color:#9FB4C7">Pero esta vez hay una diferencia:</div>
+ <div class="h" data-s="18" data-f=".5" style="font-size:124px;margin-top:30px">Ya existe <span class="a">una salida.</span></div>
+</div>
+<div class="sc" data-s="19">
+ <div class="h" data-s="19" style="font-size:108px">¿En qué <span class="a">acaba?</span></div>
+ <div class="sub" data-s="19" data-f=".2" style="font-size:48px">Léelo completo en el newsletter de El Holder.</div>
+ <div class="cta" data-s="19" data-f=".45">El link está en mi perfil</div>
+</div>
+
+<div id="cap"></div>
+<script>
+const ST=[0, 4.12, 8.94, 10.77, 12.73, 16.95, 20.84, 23.56, 24.85, 27.65, 32.58, 38.08, 43.15, 45.25, 47.62, 51.88, 56.83, 59.97, 61.83, 65.63], END=69.0;
+const SEN=["Si estás en IA, es hora de voltear a ver cripto.", "Desde que salió ChatGPT, la IA se tragó la liquidez que antes iba a cripto.", "Por eso cripto se ve así.", "Y la IA se ve así.", "En 2021, un taxista me recomendaba Cardano y XRP.", "Ayer, otro me contaba las maravillas que hace con ChatGPT.", "Pero esta burbuja no es como la del internet.", "Es inmobiliaria.", "Y se está desarrollando igualito al 2008.", "Un data center es un proyecto inmobiliario: almacenes gigantes llenos de chips.", "Se construyen con deuda a más de 20 años, pero los chips quedan obsoletos en máximo 4.", "En 2024, las big tech pidieron prestados $17 billones.", "Este año, $250 billones.", "Y el próximo, $420 billones.", "Van a sobrar tantos data centers, que se convertirán en canchas de pádel.", "Y las señales ya están aquí: los bonos que financian data centers ya están cayendo.", "En 2008, el gobierno respondió imprimiendo dinero.", "Y el que pagó fue el de siempre.", "Pero esta vez hay una diferencia: ya existe una salida.", "Si quieres leer en qué acaba, el link está en mi perfil."];
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3), cl=(x,a,b)=>Math.max(a,Math.min(b,x));
+const scs=[...document.querySelectorAll('.sc')], S0=scs.map(s=>+s.dataset.s);
+const tOf=el=>{const s=+el.dataset.s, f=+(el.dataset.f||0); return ST[s]+((ST[s+1]??END)-ST[s])*f};
+const els=scs.map(s=>[...s.querySelectorAll('[data-s]')].map(e=>[e,0]));
+let lastS=-1;
+window.SCENES=()=>S0.map(s=>ST[s]).concat([END]);
+window.setT=function(t){
+ if(els[0][0][1]===0) els.forEach(a=>a.forEach(p=>p[1]=tOf(p[0])));
+ let i=0; S0.forEach((s,j)=>{if(t>=ST[s]) i=j});
+ const t1=i+1<S0.length?ST[S0[i+1]]:END;
+ scs.forEach((s,k)=>s.style.display=k==i?'flex':'none');
+ scs[i].style.opacity=i==scs.length-1?1:cl((t1-t)/0.25,0,1);
+ els[i].forEach(([e,te])=>{let o=ease((t-te)/0.4); if(e.dataset.o) o*=1-ease((t-ST[+e.dataset.o])/0.3); e.style.opacity=o; e.style.transform=e.tagName=='IMG'?`scale(${1+0.05*cl((t-te)/6,0,1)})`:`translateY(${(1-o)*36}px)`});
+ let si=0; for(let j=0;j<SEN.length;j++) if(t>=ST[j]) si=j;
+ const cap=document.getElementById('cap'); if(si!==lastS){cap.textContent=SEN[si]; lastS=si}
+ cap.style.opacity=ease((t-ST[si])/0.2);
+ document.querySelector('#bar b').style.width=(cl(t/END,0,1)*100)+'%';
+};
+</script></body></html>
