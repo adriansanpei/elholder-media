@@ -36,8 +36,13 @@ p{margin:30px 0 0;font-weight:700;font-size:46px;line-height:1.2;color:#DCE6EF;m
 #s7 h1{font-size:84px}
 #s7 p{font-size:42px;margin-top:24px}
 #s7 .cue{background:#4FC3F7;margin-top:34px}
+#bg{position:absolute;inset:0;background-size:cover;background-position:center;display:none}
+#ov{position:absolute;inset:0;display:none;background:linear-gradient(180deg,rgba(14,34,56,.30) 0%,rgba(14,34,56,.08) 32%,rgba(14,34,56,.80) 50%,#0E2238 66%)}
+body.ph #bg,body.ph #ov{display:block}
+body.ph #grid,body.ph #fade,body.ph svg.ch{display:none}
+body.ph .yr,body.ph .q{filter:drop-shadow(0 6px 26px rgba(0,0,0,.75))}
 </style></head><body>
-<div id="grid"></div><div id="fade"></div>
+<div id="bg"></div><div id="ov"></div><div id="grid"></div><div id="fade"></div>
 <svg class="ch" viewBox="0 0 1080 1350"><defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF3B47" stop-opacity=".30"/><stop offset="1" stop-color="#FF3B47" stop-opacity="0"/></linearGradient></defs>
 <path id="ar" fill="url(#g)"/><path id="ln" fill="none" stroke="#FF3B47" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/></svg>
 
@@ -47,7 +52,7 @@ p{margin:30px 0 0;font-weight:700;font-size:46px;line-height:1.2;color:#DCE6EF;m
  <div class="cue">Desliza →</div></div></div>
 
 <div class="s" id="s2"><div class="in"><div class="pill">GTA</div><div class="yr">1997</div></div>
- <div class="bt"><div class="k">Mismo año</div><h1>Crisis financiera <span class="a">asiática</span></h1><p>Las monedas de Tailandia, Indonesia y Corea del Sur se desplomaron y el contagio sacudió a los mercados del mundo.</p></div></div>
+ <div class="bt"><div class="k">Mismo año</div><h1>Crisis financiera <span class="a">asiática</span></h1><p>Tailandia, Indonesia y Corea del Sur vieron desplomarse sus monedas. El contagio sacudió al mundo.</p></div></div>
 
 <div class="s" id="s3"><div class="in"><div class="pill">GTA 2</div><div class="yr">1999</div></div>
  <div class="bt"><div class="k">Mismo año</div><h1>Crisis del <span class="a">real brasileño</span></h1><p>Brasil soltó su moneda y el real se devaluó con fuerza en cuestión de semanas. En LatAm lo llamaron el "efecto samba".</p></div></div>
@@ -67,7 +72,7 @@ p{margin:30px 0 0;font-weight:700;font-size:46px;line-height:1.2;color:#DCE6EF;m
 
 <div id="pie"><img src="../../../brand/logo-horizontal-transparente.png"></div>
 <script>
-const n=+(location.hash||'#1').slice(1);document.getElementById('s'+n).style.display='block';
+const n=+(location.hash||'#1').slice(1);if(n>1){document.body.classList.add('ph');document.getElementById('bg').style.backgroundImage=`url(bg${n}.jpg)`;}document.getElementById('s'+n).style.display='block';
 // gráfica cayendo, distinta por slide (determinista)
 let seed=n*97+13;const rnd=()=>{seed=(seed*1103515245+12345)%2147483648;return seed/2147483648};
 const y0=n==1?250:420,y1=n==1?1180:1200;let pts=[];const N=16;
