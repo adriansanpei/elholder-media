@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:800;src:url('../../../fonts/inter-tight-latin-800-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:'IT';color:#fff;
+ background:radial-gradient(900px 700px at 85% 8%,rgba(255,79,163,.30),transparent 60%),radial-gradient(900px 800px at 5% 70%,rgba(79,195,247,.22),transparent 60%),#0E2238}
+#grid{position:absolute;left:-300px;right:-300px;bottom:0;height:470px;opacity:.20;transform:perspective(600px) rotateX(62deg);transform-origin:bottom;
+ background-image:linear-gradient(#4FC3F7 2px,transparent 2px),linear-gradient(90deg,#4FC3F7 2px,transparent 2px);background-size:90px 90px}
+#fade{position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(0deg,#0E2238 35%,transparent)}
+svg.ch{position:absolute;left:0;top:0;width:1080px;height:1350px}
+.s{position:absolute;inset:0;display:none}
+.pill{display:inline-block;background:#fff;color:#0E2238;font-weight:900;font-size:40px;letter-spacing:.04em;padding:12px 28px;border-radius:14px}
+.yr{font-weight:900;font-size:350px;line-height:.85;letter-spacing:-.05em;margin-top:26px;
+ background:linear-gradient(180deg,#fff 30%,#FF8FC4 100%);-webkit-background-clip:text;color:transparent}
+.in{position:absolute;left:72px;right:72px;top:96px}
+.bt{position:absolute;left:72px;right:72px;top:690px}
+.k{font-weight:800;font-size:30px;letter-spacing:.16em;text-transform:uppercase;color:#FF6B74;margin-bottom:16px}
+h1{margin:0;font-weight:900;font-size:112px;line-height:.96;letter-spacing:-.03em}
+h1 .a{color:#4FC3F7}
+p{margin:30px 0 0;font-weight:700;font-size:46px;line-height:1.2;color:#DCE6EF;max-width:900px}
+#pie{position:absolute;left:72px;bottom:56px;height:50px}
+#pie img{height:46px}
+/* portada */
+#s1 .logo{position:absolute;right:40px;top:40px;width:470px;transform:rotate(4deg)}
+#s1 .bt{top:400px}
+#s1 h1{font-size:120px}
+.yrs{display:flex;gap:12px;margin-top:40px}
+.yrs span{font-weight:900;font-size:34px;padding:10px 18px;border-radius:12px;background:rgba(18,41,63,.9);border:2px solid rgba(79,195,247,.35)}
+.yrs span.q{background:#FF3B47;border-color:#FF3B47}
+.cue{display:inline-block;margin-top:40px;background:#fff;color:#0E2238;font-weight:900;font-size:34px;padding:16px 30px;border-radius:999px}
+/* final */
+#s7 .logo{position:absolute;right:40px;top:30px;width:270px;transform:rotate(4deg)}
+#s7 .q{font-weight:900;font-size:350px;line-height:.85;letter-spacing:-.02em;color:#FF3B47;margin-top:26px}
+#s7 .bt{top:640px}
+#s7 h1{font-size:84px}
+#s7 p{font-size:42px;margin-top:24px}
+#s7 .cue{background:#4FC3F7;margin-top:34px}
+</style></head><body>
+<div id="grid"></div><div id="fade"></div>
+<svg class="ch" viewBox="0 0 1080 1350"><defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF3B47" stop-opacity=".30"/><stop offset="1" stop-color="#FF3B47" stop-opacity="0"/></linearGradient></defs>
+<path id="ar" fill="url(#g)"/><path id="ln" fill="none" stroke="#FF3B47" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/></svg>
+
+<div class="s" id="s1"><img class="logo" src="gta6.png">
+ <div class="bt"><div class="k">Coincidencia sospechosa</div><h1>Cada GTA ha salido junto a una <span class="a">crisis económica.</span></h1>
+ <div class="yrs"><span>1997</span><span>1999</span><span>2001</span><span>2008</span><span>2013</span><span class="q">2026 ?</span></div>
+ <div class="cue">Desliza →</div></div></div>
+
+<div class="s" id="s2"><div class="in"><div class="pill">GTA</div><div class="yr">1997</div></div>
+ <div class="bt"><div class="k">Mismo año</div><h1>Crisis financiera <span class="a">asiática</span></h1><p>Las monedas de Tailandia, Indonesia y Corea del Sur se desplomaron y el contagio sacudió a los mercados del mundo.</p></div></div>
+
+<div class="s" id="s3"><div class="in"><div class="pill">GTA 2</div><div class="yr">1999</div></div>
+ <div class="bt"><div class="k">Mismo año</div><h1>Crisis del <span class="a">real brasileño</span></h1><p>Brasil soltó su moneda y el real se devaluó con fuerza en cuestión de semanas. En LatAm lo llamaron el "efecto samba".</p></div></div>
+
+<div class="s" id="s4"><div class="in"><div class="pill">GTA III</div><div class="yr">2001</div></div>
+ <div class="bt"><div class="k">Mismo año</div><h1>Estallido de las <span class="a">puntocom</span></h1><p>Reventó la burbuja de internet: el Nasdaq llegó a caer casi 80% desde su máximo.</p></div></div>
+
+<div class="s" id="s5"><div class="in"><div class="pill">GTA IV</div><div class="yr">2008</div></div>
+ <div class="bt"><div class="k">Mismo año</div><h1>Crisis financiera <span class="a">global</span></h1><p>Quebró Lehman Brothers y el S&amp;P 500 llegó a perder más de la mitad de su valor.</p></div></div>
+
+<div class="s" id="s6"><div class="in"><div class="pill">GTA V</div><div class="yr">2013</div></div>
+ <div class="bt"><div class="k">Mismo año</div><h1>Crisis de deuda <span class="a">europea</span></h1><p>Chipre fue rescatado y sus bancos cerraron casi dos semanas, con límites para sacar dinero.</p></div></div>
+
+<div class="s" id="s7"><img class="logo" src="gta6.png"><div class="in"><div class="pill">GTA VI</div><div class="q">???</div></div>
+ <div class="bt"><div class="k">19 de noviembre de 2026</div><h1>Un día después del estreno, <span class="a">todo cayó a la vez.</span></h1><p>Bitcoin bajo $59,000, S&amp;P 500 bajo 7,100 y oro bajo $3,550.</p>
+ <div class="cue">¿Coincidencia o maldición? Comenta</div></div></div>
+
+<div id="pie"><img src="../../../brand/logo-horizontal-transparente.png"></div>
+<script>
+const n=+(location.hash||'#1').slice(1);document.getElementById('s'+n).style.display='block';
+// gráfica cayendo, distinta por slide (determinista)
+let seed=n*97+13;const rnd=()=>{seed=(seed*1103515245+12345)%2147483648;return seed/2147483648};
+const y0=n==1?250:420,y1=n==1?1180:1200;let pts=[];const N=16;
+for(let i=0;i<=N;i++){const t=i/N;const x=560+t*560;const y=y0+(y1-y0)*Math.pow(t,1.5)+(rnd()-.5)*110*(i>0&&i<N?1:0);pts.push([x,y])}
+const d='M'+pts.map(p=>p[0].toFixed(0)+','+p[1].toFixed(0)).join(' L');
+document.getElementById('ln').setAttribute('d',d);document.getElementById('ar').setAttribute('d',d+' L1120,1350 L560,1350 Z');
+document.querySelector('svg.ch').style.opacity=n==1||n==7?.55:.5;
+</script></body></html>
