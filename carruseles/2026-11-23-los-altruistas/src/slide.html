@@ -32,16 +32,16 @@ p b{color:#fff;font-weight:900}
 #s8 .cue{background:#4FC3F7}
 </style></head><body>
 
-<div class="s" id="s1"><div class="bg" style="background-image:url(tv.jpg)"></div><div class="ov"></div>
+<div class="s" id="s1"><div class="bg" data-box="1" style="background-image:url(poster.png);background-size:165%;background-position:92% 8%"></div><div class="ov"></div>
  <div class="t"><div class="pill">POLÉMICA</div><h1>La serie de Netflix que tiene <span class="a">furioso</span> al mundo cripto.</h1>
  <p>"Los Altruistas" cuenta la caída de FTX… y casi nadie quedó contento.</p><div class="cue">Desliza →</div></div></div>
 
-<div class="s" id="s2"><div class="bg" style="background-image:url(penthouse.jpg)"></div><div class="ov"></div>
+<div class="s" id="s2"><div class="bg" data-box="1" style="background-image:url(sbf.png);background-position:47% 30%"></div><div class="ov"></div>
  <div class="t"><div class="k">De qué trata</div><h1>El colapso de FTX, <span class="a">en 8 episodios.</span></h1>
  <p>Se estrenó el 19 de noviembre. Anthony Boyle es Sam Bankman-Fried y Julia Garner es Caroline Ellison.</p>
  <p><b>Dato:</b> entre los productores ejecutivos están Barack y Michelle Obama.</p></div></div>
 
-<div class="s" id="s3"><div class="bg" style="background-image:url(heart.jpg)"></div><div class="ov"></div>
+<div class="s" id="s3"><div class="bg" data-box="1" style="background-image:url(baile.png);background-position:55% 20%"></div><div class="ov"></div>
  <div class="t"><div class="k">Polémica 1</div><h1>Un fraude de $8 billones contado como <span class="a">historia de amor.</span></h1>
  <div class="q r"><b>"Una historia de amor. Qué vergüenza."</b><span>Constance Wang, ex directora de operaciones de FTX. Dice que casi nadie en la empresa sabía que eran pareja hasta después de la quiebra.</span></div></div></div>
 
@@ -55,7 +55,7 @@ p b{color:#fff;font-weight:900}
  <p>El creador de Ethereum dijo que la serie exagera el acento de CZ unas tres veces y sugirió que el retrato es racista.</p>
  <p>Yi He, cofundadora de Binance, dice que el hueco de FTX ya superaba los $8 billones antes de que Binance vendiera sus tokens.</p></div></div>
 
-<div class="s" id="s6"><div class="bg" style="background-image:url(court.jpg)"></div><div class="ov"></div>
+<div class="s" id="s6"><div class="bg" data-box="1" style="background-image:url(caroline.png);background-position:40% 25%"></div><div class="ov"></div>
  <div class="t"><div class="k">Polémica 4</div><h1>¿Y quién es <span class="a">el culpable?</span></h1>
  <p>Según la crítica, la serie pinta a SBF como un enamorado pasivo y a Caroline como la que mueve el fraude. En la vida real:</p>
  <div class="row"><div class="c r"><em>SBF</em><b>25 años</b><span>De cárcel, culpable de 7 cargos</span></div><div class="c"><em>Caroline Ellison</em><b>2 años</b><span>Se declaró culpable y testificó contra él</span></div></div></div></div>
@@ -64,12 +64,12 @@ p b{color:#fff;font-weight:900}
  <div class="t"><div class="k">Desde prisión</div><h1>Y SBF… <span class="a">se lo tomó con humor.</span></h1>
  <div class="q"><b>"Este tipo quiere interpretarme en la temporada 2, ¿qué opinan?"</b><span>Publicado en su cuenta de X el 21 de noviembre, a través de un intermediario</span></div></div></div>
 
-<div class="s" id="s8"><div class="bg" style="background-image:url(tv.jpg)"></div><div class="ov"></div>
+<div class="s" id="s8"><div class="bg" data-box="1" style="background-image:url(ambos.png);background-position:50% 20%"></div><div class="ov"></div>
  <div class="t"><div class="k">El veredicto</div><h1>¿Serie o <span class="a">lavado de imagen?</span></h1>
  <div class="row"><div class="c"><b>76%</b><span>Rotten Tomatoes</span></div><div class="c"><b>65/100</b><span>Metacritic</span></div></div>
  <p>Su creador admite que hay partes de "imaginación creativa". Y Julia Garner lo resume así: "No se trata de cripto".</p>
  <div class="cue">¿Ya la viste? Comenta qué te pareció</div></div></div>
 
 <div id="pie"><img src="../../../brand/logo-horizontal-transparente.png"></div>
-<script>const n=(location.hash||'#1').slice(1);const el=document.getElementById('s'+n);el.style.display='block';document.fonts.ready.then(()=>{const y=el.querySelector('.t').getBoundingClientRect().top/1350*100;el.querySelector('.ov').style.background=`linear-gradient(180deg,rgba(14,34,56,.22) 0%,rgba(14,34,56,.08) ${Math.max(5,y-22)}%,rgba(14,34,56,.86) ${y-3}%,#0E2238 ${y+12}%)`;});</script>
+<script>const n=(location.hash||'#1').slice(1);const el=document.getElementById('s'+n);el.style.display='block';document.fonts.ready.then(()=>{const y=el.querySelector('.t').getBoundingClientRect().top/1350*100;const bg=el.querySelector('.bg'); if(bg.dataset.box){const top=el.querySelector('.t').getBoundingClientRect().top; const h=Math.round(top+110); bg.style.bottom='auto'; bg.style.height=h+'px'; const yy=h/1350*100; el.querySelector('.ov').style.background=`linear-gradient(180deg,rgba(14,34,56,0) 0%,rgba(14,34,56,0) ${yy-20}%,rgba(14,34,56,.85) ${yy-6}%,#0E2238 ${yy}%)`;} else {el.querySelector('.ov').style.background=`linear-gradient(180deg,rgba(14,34,56,.22) 0%,rgba(14,34,56,.08) ${Math.max(5,y-22)}%,rgba(14,34,56,.86) ${y-3}%,#0E2238 ${y+12}%)`;}});</script>
 </body></html>
