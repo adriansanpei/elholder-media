@@ -31,53 +31,61 @@ def page(body, bg=None, pie=True, extra=""):
 ANTH = '<svg viewBox="0 0 24 24" style="height:64px;display:block"><path fill="#fff" d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>'
 
 slides = []
-# 1 portada
+# 1 portada: el problema + el tiempo + quién lo rompió
 slides.append(page(f'''
 <div class="in" style="top:64px;display:flex;justify-content:space-between;align-items:center">
  <img src="../../../brand/logo-horizontal-transparente.png" style="height:58px">{ANTH}</div>
 <div class="zeta">ζ(s) = 0</div>
-<div class="bt" style="top:360px">
+<div class="bt" style="top:330px">
  <span class="tag">ESTA SEMANA</span>
- <div class="big neon-v" style="margin-top:22px;white-space:nowrap">166<span style="font-size:150px;letter-spacing:-.03em"> años</span></div>
- <h1 style="font-size:96px;margin-top:26px">La IA de <span class="a">ANTHROPIC</span> ayudó a resolver el problema más famoso de las matemáticas.</h1>
+ <h1 style="font-size:66px;line-height:1.04;margin-top:26px">El problema más difícil de las matemáticas llevaba</h1>
+ <div class="big neon-v" style="margin-top:14px;white-space:nowrap;font-size:290px">166<span style="font-size:150px;letter-spacing:-.03em"> años</span></div>
+ <h1 style="font-size:118px;margin-top:6px">sin resolverse.</h1>
+ <h1 style="font-size:66px;line-height:1.04;margin-top:34px" class="a">Acaba de caer con ayuda de la IA de ANTHROPIC.</h1>
  <div class="cue">Desliza →</div></div>''', bg='ia-chip-01', pie=False,
- extra="#ov{background:linear-gradient(180deg,rgba(14,34,56,.45) 0%,rgba(14,34,56,.35) 25%,rgba(14,34,56,.85) 45%,#0E2238 62%)} .zeta{position:absolute;right:60px;top:170px;font-family:Georgia,serif;font-style:italic;font-size:120px;color:rgba(79,195,247,.85);text-shadow:0 0 40px rgba(79,195,247,.8);transform:rotate(-6deg)}"))
-# 2 qué pasó
+ extra="#ov{background:linear-gradient(180deg,rgba(14,34,56,.45) 0%,rgba(14,34,56,.35) 20%,rgba(14,34,56,.85) 40%,#0E2238 58%)} .zeta{position:absolute;right:60px;top:160px;font-family:Georgia,serif;font-style:italic;font-size:110px;color:rgba(79,195,247,.85);text-shadow:0 0 40px rgba(79,195,247,.8);transform:rotate(-6deg)}"))
+# 2 el origen
 slides.append(page('''
-<div class="bt" style="top:600px"><div class="k">Qué pasó</div>
- <h1>“Creo que la resolví, <span class="a">trabajando con Claude.</span>”</h1>
- <p>Eso escribió Levent Alpöge, matemático de Anthropic, el 20 de noviembre. Hablaba de la Hipótesis de Riemann: planteada en 1859 y con un premio de $1 millón de dólares.</p></div>''', bg='cafe-escritorio-01'))
-# 3 qué es
+<div class="in"><div class="big neon-a">1859</div></div>
+<div class="bt" style="top:600px"><div class="k">Todo empezó aquí</div>
+ <h1 style="font-size:92px">Un matemático dejó una pregunta que <span class="a">nadie pudo contestar.</span></h1>
+ <p>Bernhard Riemann creyó ver un patrón oculto en los números primos (2, 3, 5, 7, 11…). Lo escribió. Nunca logró demostrarlo.</p></div>''', bg='cafe-escritorio-01'))
+# 3 lo que estaba en juego
 slides.append(page('''
-<div class="in"><div class="big neon-a" style="font-size:150px;letter-spacing:-.02em">2, 3, 5, 7, 11…</div></div>
-<div class="bt" style="top:620px"><div class="k">¿Y eso qué es?</div>
- <h1>El mapa secreto de los <span class="a">números primos.</span></h1>
- <p>Los primos parecen salir al azar. Riemann propuso que siguen un patrón oculto. En más de 160 años, nadie lo había podido demostrar.</p></div>''', bg='lupa-datos-01'))
-# 4 17M
+<div class="in"><div class="big neon-v" style="font-size:168px;letter-spacing:-.04em;white-space:nowrap;margin-top:40px">$1,000,000</div></div>
+<div class="bt" style="top:600px"><div class="k">El premio</div>
+ <h1 style="font-size:92px">Para quien lo resolviera. <span class="a">Nadie lo cobró.</span></h1>
+ <p>Los mejores matemáticos del mundo lo intentaron durante generaciones. Algunos le dedicaron la vida entera. Todos fallaron.</p></div>''', bg='dolares-01'))
+# 4 el giro
+slides.append(page('''
+<div class="bt" style="top:560px"><div class="k">Hasta el 20 de noviembre</div>
+ <h1>“Creo que lo resolví, <span class="a">trabajando con Claude.</span>”</h1>
+ <p>Lo escribió Levent Alpöge, matemático de Anthropic. Su compañero de trabajo no era una persona: era una inteligencia artificial.</p></div>''', bg='ciudad-noche-01'))
+# 5 la prueba
 slides.append(page('''
 <div class="in"><div class="big neon-v">17M</div></div>
-<div class="bt" style="top:620px"><div class="k">La prueba</div>
- <h1>Líneas de código para <span class="a">comprobarla.</span></h1>
- <p>Está escrita en Lean, un lenguaje donde la computadora revisa cada paso. Las comunidades de Lean y Mathlib ya la certificaron como correcta.</p></div>''', bg='ia-chip-02'))
-# 5 nadie la ha leído
+<div class="bt" style="top:600px"><div class="k">¿Y es verdad?</div>
+ <h1 style="font-size:92px">Líneas de código. Y sí, <span class="a">es correcta.</span></h1>
+ <p>La prueba está escrita para que una computadora revise cada paso. Matemáticos independientes ya la certificaron.</p></div>''', bg='ia-chip-02'))
+# 6 el detalle inquietante
 slides.append(page('''
 <div class="in"><div class="big neon-r">0</div></div>
-<div class="bt" style="top:620px"><div class="k">El detalle inquietante</div>
- <h1>Humanos la han leído <span class="a">completa.</span></h1>
- <p>La máquina dice que es correcta, pero todavía no entendemos por qué funciona. Descifrarla podría tomar años.</p></div>''', bg='multitud-01'))
-# 6 qué viene
+<div class="bt" style="top:600px"><div class="k">Pero hay un detalle</div>
+ <h1 style="font-size:92px">Ningún humano la ha leído <span class="a">completa.</span></h1>
+ <p>Sabemos que es verdad. Todavía no entendemos por qué. Descifrarla podría tomar años.</p></div>''', bg='multitud-01'))
+# 7 lo que significa
 slides.append(page('''
-<div class="bt" style="top:600px"><div class="k">¿Y esto qué significa?</div>
+<div class="bt" style="top:560px"><div class="k">Y ahora la pregunta incómoda</div>
  <h1>Si la IA pudo con esto, <span class="a">¿qué sigue?</span></h1>
- <p>Gente de la industria advierte que podría acelerar la ciencia, la medicina y la propia IA más rápido de lo que podemos vigilar. El debate ya no es si llega, sino cómo.</p></div>''', bg='cohete-01'))
-# 7 CTA
+ <p>Dentro de la industria ya lo advierten: podría acelerar la ciencia, la medicina y hasta mejorarse a sí misma, más rápido de lo que podemos vigilar.</p></div>''', bg='cohete-01'))
+# 8 CTA
 slides.append(page('''
 <img src="../../../brand/mascotas/doggy-lentes.png" style="position:absolute;right:-40px;bottom:0;width:470px">
 <div class="in" style="top:120px"><img src="../../../brand/logo-horizontal-transparente.png" style="height:80px;display:block">
  <h1 style="font-size:104px;margin-top:60px">La IA ya no solo escribe. <span class="a">Descubre.</span></h1>
  <p style="max-width:620px">Te explicamos qué significa para ti y para tu dinero, sin rollo. Gratis en tu correo.</p>
  <div class="cue" style="background:#4FC3F7">Link en la bio</div>
- <p style="font-size:38px;max-width:560px;margin-top:50px">¿Emocionante o da miedo? Comenta.</p></div>''', pie=False))
+ <p style="font-size:38px;max-width:560px;margin-top:50px">¿Te emociona o te da miedo? Comenta.</p></div>''', pie=False))
 for i, h in enumerate(slides, 1):
     open(f'src/slide-{i:02d}.html', 'w').write(h)
 print(len(slides))
