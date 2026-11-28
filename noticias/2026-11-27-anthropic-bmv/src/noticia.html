@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'IT';font-weight:700;src:url('../../../fonts/inter-tight-latin-700-normal.woff2')}
+@font-face{font-family:'IT';font-weight:900;src:url('../../../fonts/inter-tight-latin-900-normal.woff2')}
+html,body{margin:0}*{box-sizing:border-box}
+body{width:1080px;height:1350px;position:relative;overflow:hidden;background:#152F46;font-family:'IT';color:#fff}
+#foto{position:absolute;left:0;top:0;width:1080px;height:700px;overflow:hidden;background:#05101C}
+#foto .bg{position:absolute;left:-20px;top:120px;width:1240px;height:620px;object-fit:cover;object-position:0% 40%}
+#foto .seam{position:absolute;left:0;right:0;top:110px;height:140px;background:linear-gradient(#05101C,transparent)}
+#foto .top{position:absolute;left:0;right:0;top:0;height:230px;background:linear-gradient(rgba(5,16,28,.85),transparent)}
+#foto .fade{position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(transparent,#05101C)}
+#foto .logo{position:absolute;left:64px;top:40px;width:520px;filter:drop-shadow(0 6px 24px rgba(0,0,0,.6))}
+.tagp{position:absolute;font-weight:900;border-radius:14px;padding:8px 20px}
+#bar{position:absolute;left:0;top:700px;width:1080px;height:6px;background:#FF3B47}
+#pill{position:absolute;left:64px;top:668px;display:flex;height:64px;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#pill .l{display:flex;align-items:center;gap:12px;background:#E5484D;font-weight:900;font-size:26px;letter-spacing:.1em;padding:0 22px}
+#pill .l i{width:14px;height:14px;border-radius:50%;background:#fff;display:block;box-shadow:0 0 0 5px rgba(255,255,255,.3)}
+#pill .r{display:flex;align-items:center;background:#fff;color:#152F46;font-weight:900;font-size:26px;letter-spacing:.06em;padding:0 22px}
+#txt{position:absolute;left:64px;right:64px;top:780px;display:flex;flex-direction:column;gap:24px}
+h1{margin:0;font-weight:900;font-size:76px;line-height:.98;letter-spacing:-.025em;text-transform:uppercase}
+h1 .a{color:#4FC3F7}
+p{margin:0;font-weight:700;font-size:32px;line-height:1.25;color:#DCE6EF}
+p b{color:#fff}
+#pie{position:absolute;left:64px;right:64px;bottom:52px;display:flex;align-items:center;justify-content:space-between}
+#pie img{width:200px}#pie span{font-size:24px;font-weight:700;color:#9FB4C7}
+</style></head><body>
+<div id="foto"><img class="bg" src="bg.jpg"><div class="seam"></div>
+ <img class="logo" src="anthropic-white.png">
+ <div class="tagp" style="left:690px;top:430px;font-size:38px;background:#fff;color:#152F46">Clave en BMV</div>
+ <div class="tagp" style="left:690px;top:505px;font-size:84px;background:#D97757;color:#fff;box-shadow:0 10px 40px rgba(217,119,87,.6)">ANT</div>
+ <div class="fade"></div></div>
+<div id="bar"></div>
+<div id="pill"><span class="l"><i></i>ÚLTIMA HORA</span><span class="r">🇲🇽 BMV</span></div>
+<div id="txt">
+ <h1>Anthropic llega a la <span class="a">Bolsa Mexicana de Valores</span></h1>
+ <p>La creadora de Claude ya cotiza en el SIC, así que puedes comprarla en pesos desde una casa de bolsa mexicana. Llega tras recaudar <b>$93.5 billones de dólares</b> en su OPI en Nasdaq, a $83 por acción.</p>
+</div>
+<div id="pie"><img src="../../../brand/logo-horizontal-transparente.png"><span>Datos: Anthropic, Expansión</span></div>
+</body></html>
