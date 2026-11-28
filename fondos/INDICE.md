@@ -33,3 +33,10 @@ Regla de uso: elige el tema que más se acerque al slide. No repitas la misma fo
 Para agregar fondos nuevos: genera con Runway (prompt base abajo), redimensiona a 1080×1350 JPG calidad 88, nómbralo `<tema>-NN.jpg` y agrega la fila aquí.
 
 Prompt base: "Moody editorial photograph, dark and cinematic: <escena>, deep navy blue tones, no text, no logos, no people, high contrast, lots of dark negative space at the top for typography overlay." (ratio 1080:1350, modelo gpt-image-2, ~20 créditos).
+
+## Fotos reales (no IA, las manda Adrián)
+Para temas de lugares o personas reales, usar estas primero antes de generar con IA. No marcar como "hecho con IA".
+
+| Tema | Archivos | Úsalo para |
+|---|---|---|
+| bmv | bmv-real-01 (1200×720, edificio y domo de la Bolsa Mexicana de Valores, de día) | Bolsa Mexicana de Valores, SIC, empresas que listan en México, IPC, mercado mexicano |
